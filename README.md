@@ -1,10 +1,19 @@
 # MemoryPool
 
-#### 메모리풀을 썼을때와 쓰지 않았을 때 스냅샷을 통해 실제로 메모리 할당 차이를 보여주고 있다.
-![image](https://github.com/JiHyeokHeo/MemoryPool/assets/125938592/8d712932-b078-4583-a030-89047683151f)
+<div align="center">
 
-![image](https://github.com/JiHyeokHeo/MemoryPool/assets/125938592/29d4f141-14c3-4bc9-b112-780b61843282)
+#### 메모리풀을 썼을 때와 쓰지 않았을 때 스냅샷을 통해 실제로 메모리 할당 차이를 보여주고 있다.<br>
 
-![image](https://github.com/JiHyeokHeo/MemoryPool/assets/125938592/19683f8e-e023-463c-8743-72f34c33faf5)
+<p align="center"><img src = "https://github.com/JiHyeokHeo/MemoryPool/assets/125938592/0848bb4f-a4ab-40e1-ab2f-7ee1926d3519" width="30%" height="30%"></p>
+  
+###### 4096 바이트씩 메모리를 할당한 모습
 
-![image](https://github.com/JiHyeokHeo/MemoryPool/assets/125938592/1811cb78-c399-4ec5-98f7-284df816f9a1)
+<p align="center"><img src = "https://github.com/JiHyeokHeo/MemoryPool/assets/125938592/4ba24a03-cf06-41b0-ab2d-4436c5544092" width="50%" height="50%"></p>
+
+###### 스냅샷을 위한 브레이크 포인트들
+  
+<p align="center"><img src = "https://github.com/JiHyeokHeo/MemoryPool/assets/125938592/938a2ac8-6677-4c73-8a06-49e2023f836b" width="50%" height="50%"></p>
+
+######  메모리 및 크기 차이 (메모리 누수, 댕글링 포인터 유추가능)
+
+</div>
