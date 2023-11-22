@@ -30,16 +30,16 @@ char buf[4096]; // 간단한 메모리풀
 class SharedData
 {
 public:
-	// 
+	 
 
-	//void* operator new(size_t uiSize)
-	//{
-	//	// global memory
-	//	return (void*)buf;
-	//}
-	//void operator delete(void* p)
-	//{
-	//}
+	void* operator new(size_t uiSize)
+	{
+		// global memory
+		return (void*)buf;
+	}
+	void operator delete(void* p)
+	{
+	}
 };
 
 void SimpleMemoryPool()
