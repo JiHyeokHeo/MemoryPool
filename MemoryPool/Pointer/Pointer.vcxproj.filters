@@ -13,19 +13,28 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\Array">
+      <UniqueIdentifier>{49cfdd98-9891-4a5a-a3ed-f0a273f650f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Pointer">
+      <UniqueIdentifier>{fb8deb93-361e-4464-b045-b484e411ab97}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Array.cpp">
+      <Filter>소스 파일\Array</Filter>
+    </ClCompile>
     <ClCompile Include="Pointer_1.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Pointer</Filter>
     </ClCompile>
     <ClCompile Include="Pointer_2.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Pointer</Filter>
     </ClCompile>
     <ClCompile Include="pointer_3.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Pointer</Filter>
     </ClCompile>
     <ClCompile Include="Reference.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Pointer</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

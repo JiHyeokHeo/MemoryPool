@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Array.cpp" />
     <ClCompile Include="Pointer_1.cpp" />
     <ClCompile Include="Pointer_2.cpp" />
     <ClCompile Include="pointer_3.cpp" />
