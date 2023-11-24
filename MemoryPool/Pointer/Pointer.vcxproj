@@ -128,9 +128,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Array.cpp" />
+    <ClCompile Include="ArrayDif.cpp" />
     <ClCompile Include="Pointer_1.cpp" />
     <ClCompile Include="Pointer_2.cpp" />
     <ClCompile Include="pointer_3.cpp" />
+    <ClCompile Include="RandomNumberMaker.cpp" />
     <ClCompile Include="Reference.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

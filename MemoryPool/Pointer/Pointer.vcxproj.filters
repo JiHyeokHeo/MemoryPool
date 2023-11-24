@@ -19,6 +19,12 @@
     <Filter Include="소스 파일\Pointer">
       <UniqueIdentifier>{fb8deb93-361e-4464-b045-b484e411ab97}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Practice">
+      <UniqueIdentifier>{563e68d9-ab13-45d7-8523-5604e9b2e93b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Practice\Pointer">
+      <UniqueIdentifier>{baf7118a-e349-43e3-8a72-6e59072bd5da}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Array.cpp">
@@ -35,6 +41,12 @@
     </ClCompile>
     <ClCompile Include="Reference.cpp">
       <Filter>소스 파일\Pointer</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrayDif.cpp">
+      <Filter>소스 파일\Pointer</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomNumberMaker.cpp">
+      <Filter>소스 파일\Practice\Pointer</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
