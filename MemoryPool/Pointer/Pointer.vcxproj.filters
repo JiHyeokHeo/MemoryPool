@@ -57,5 +57,8 @@
     <ClCompile Include="FinalPointer.cpp">
       <Filter>소스 파일\Pointer</Filter>
     </ClCompile>
+    <ClCompile Include="TextRPG.cpp">
+      <Filter>소스 파일\Practice\Pointer</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -137,6 +137,7 @@
     <ClCompile Include="Pointer_3.cpp" />
     <ClCompile Include="RandomNumberMaker.cpp" />
     <ClCompile Include="Reference.cpp" />
+    <ClCompile Include="TextRPG.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
