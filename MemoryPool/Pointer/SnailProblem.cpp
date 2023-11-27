@@ -46,21 +46,10 @@ void SetBoard()
 {
 	while (true)
 	{
-		SetTurn();
-		
-		if (col + addCol >= N || row + addRow >= N || col + addCol < 0 || row + addRow < 0)
-		{
-			turnCnt++;
-			SetTurn();
-		}
-
-		board[row][col] = cnt;
-		row += addRow;
-		col += addCol;
-
-		// 다 채우면 브레이크
-		if (cnt == N * N)
+		if (cnt == N * N + 1)
 			break;
+
+		SetTurn();
 
 		if (board[row][col] != 0)
 		{
@@ -70,6 +59,18 @@ void SetBoard()
 			turnCnt++;
 			SetTurn();
 		}
+
+		if (col + addCol >= N || row + addRow >= N || col + addCol < 0 || row + addRow < 0)
+		{
+			turnCnt++;
+			SetTurn();
+		}
+		
+
+		board[row][col] = cnt;
+		row += addRow;
+		col += addCol;
+
 
 		cnt++;
 	}
