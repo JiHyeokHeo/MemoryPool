@@ -137,6 +137,7 @@
     <ClCompile Include="Pointer_3.cpp" />
     <ClCompile Include="RandomNumberMaker.cpp" />
     <ClCompile Include="Reference.cpp" />
+    <ClCompile Include="SnailProblem.cpp" />
     <ClCompile Include="StringPractice_1.cpp" />
     <ClCompile Include="TextRPG.cpp" />
   </ItemGroup>

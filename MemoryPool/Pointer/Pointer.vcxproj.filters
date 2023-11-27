@@ -31,6 +31,9 @@
     <Filter Include="소스 파일\Practice\String">
       <UniqueIdentifier>{be92648b-cce2-4e8f-a857-472bc8737f04}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Practice\Snail">
+      <UniqueIdentifier>{accaff12-58d0-45a9-ae43-03e5456ec33a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Array.cpp">
@@ -68,6 +71,9 @@
     </ClCompile>
     <ClCompile Include="StringPractice_1.cpp">
       <Filter>소스 파일\Practice\String</Filter>
+    </ClCompile>
+    <ClCompile Include="SnailProblem.cpp">
+      <Filter>소스 파일\Practice\Snail</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
