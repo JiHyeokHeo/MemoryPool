@@ -36,7 +36,7 @@
     <ClCompile Include="Pointer_2.cpp">
       <Filter>소스 파일\Pointer</Filter>
     </ClCompile>
-    <ClCompile Include="pointer_3.cpp">
+    <ClCompile Include="Pointer_3.cpp">
       <Filter>소스 파일\Pointer</Filter>
     </ClCompile>
     <ClCompile Include="Reference.cpp">
@@ -53,6 +53,9 @@
     </ClCompile>
     <ClCompile Include="MultiDimensionalArray.cpp">
       <Filter>소스 파일\Array</Filter>
+    </ClCompile>
+    <ClCompile Include="FinalPointer.cpp">
+      <Filter>소스 파일\Pointer</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
