@@ -25,6 +25,12 @@
     <Filter Include="소스 파일\Practice\Pointer">
       <UniqueIdentifier>{baf7118a-e349-43e3-8a72-6e59072bd5da}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Practice\TextRPG">
+      <UniqueIdentifier>{4ebb613c-d36c-4da7-b3e8-ee38b228a71b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Practice\String">
+      <UniqueIdentifier>{be92648b-cce2-4e8f-a857-472bc8737f04}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Array.cpp">
@@ -58,7 +64,10 @@
       <Filter>소스 파일\Pointer</Filter>
     </ClCompile>
     <ClCompile Include="TextRPG.cpp">
-      <Filter>소스 파일\Practice\Pointer</Filter>
+      <Filter>소스 파일\Practice\TextRPG</Filter>
+    </ClCompile>
+    <ClCompile Include="StringPractice_1.cpp">
+      <Filter>소스 파일\Practice\String</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
