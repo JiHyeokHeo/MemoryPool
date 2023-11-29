@@ -78,10 +78,13 @@
     <ClCompile Include="SnailProblem.cpp">
       <Filter>소스 파일\Practice\Snail</Filter>
     </ClCompile>
-    <ClCompile Include="OOP.cpp">
+    <ClCompile Include="Constructor.cpp">
       <Filter>소스 파일\OOP</Filter>
     </ClCompile>
-    <ClCompile Include="OOP2.cpp">
+    <ClCompile Include="Inheritance.cpp">
+      <Filter>소스 파일\OOP</Filter>
+    </ClCompile>
+    <ClCompile Include="Encapsulation.cpp">
       <Filter>소스 파일\OOP</Filter>
     </ClCompile>
   </ItemGroup>
