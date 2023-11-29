@@ -131,6 +131,7 @@
     <ClCompile Include="ArrayDif.cpp" />
     <ClCompile Include="DoublePointer.cpp" />
     <ClCompile Include="FinalPointer.cpp" />
+    <ClCompile Include="MemberIntialize.cpp" />
     <ClCompile Include="MultiDimensionalArray.cpp" />
     <ClCompile Include="Constructor.cpp" />
     <ClCompile Include="Inheritance.cpp" />
