@@ -136,6 +136,7 @@
     <ClCompile Include="Constructor.cpp" />
     <ClCompile Include="Inheritance.cpp" />
     <ClCompile Include="Encapsulation.cpp" />
+    <ClCompile Include="OperatorOverloading.cpp" />
     <ClCompile Include="Pointer_1.cpp" />
     <ClCompile Include="Pointer_2.cpp" />
     <ClCompile Include="Pointer_3.cpp" />

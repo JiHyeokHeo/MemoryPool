@@ -32,7 +32,8 @@
 //	int _size = 10;
 //};
 //
-//class Player
+//
+//class Player 
 //{
 //public:
 //	Player() {}

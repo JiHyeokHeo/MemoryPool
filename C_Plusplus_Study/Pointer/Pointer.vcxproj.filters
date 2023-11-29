@@ -37,6 +37,9 @@
     <Filter Include="소스 파일\OOP">
       <UniqueIdentifier>{50a588cc-fd2c-4058-8c60-7530075bdf5c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\OperatorOverloading">
+      <UniqueIdentifier>{15fe2fd0-c5a3-4a04-a5b5-fbdab932af1e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Array.cpp">
@@ -92,6 +95,9 @@
     </ClCompile>
     <ClCompile Include="MemberIntialize.cpp">
       <Filter>소스 파일\OOP</Filter>
+    </ClCompile>
+    <ClCompile Include="OperatorOverloading.cpp">
+      <Filter>소스 파일\OperatorOverloading</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
