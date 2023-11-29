@@ -138,6 +138,7 @@
     <ClCompile Include="Pointer_1.cpp" />
     <ClCompile Include="Pointer_2.cpp" />
     <ClCompile Include="Pointer_3.cpp" />
+    <ClCompile Include="Polymorphism.cpp" />
     <ClCompile Include="RandomNumberMaker.cpp" />
     <ClCompile Include="Reference.cpp" />
     <ClCompile Include="SnailProblem.cpp" />

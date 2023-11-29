@@ -87,5 +87,8 @@
     <ClCompile Include="Encapsulation.cpp">
       <Filter>소스 파일\OOP</Filter>
     </ClCompile>
+    <ClCompile Include="Polymorphism.cpp">
+      <Filter>소스 파일\OOP</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

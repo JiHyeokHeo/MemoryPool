@@ -32,83 +32,83 @@ using namespace std;
 // - protected : 보호받는 상속 ->  내 자손들한테만 물려줄꺼야 (public -> protected, protected -> protected)
 // - private : 개인적인 상속 -> 나까지만 잘 쓰고 자손들한테는 아예 안 물려줄꺼야 (public -> private, protected -> private)
 
-class Car
-{
-public: // (멤버) 접근 지정자
-	void MoveHandle() {}
-	void PushPedal() {}
-	void OpenDoor() {}
-
-	void TurnKey()
-	{
-		// ...
-		RunEngine();
-	}
-
-protected:
-	void DisassembleCar() {} // 차를 분해한다
-	void RunEngine() {} // 엔진을 구동시킨다
-	void ConnectCircuit() {} // 전기선 연결
-
-public:
-	// 핸들
-	// 페달
-	// 엔진
-	// 문
-	// 각종 전기선
-};
-
-class SuperCar : private Car // 상속 접근 지정자
-{
-public:
-	void PushRemoteController()
-	{
-		RunEngine();
-	}
-	
-};
-
-class TestSuperCar : public SuperCar
-{
-public:
-	void Test()
-	{
-		DisassembleCar();
-	}
-};
-
-// '캡슐화'
-// 연관된 데이터와 함수를 논리적으로 묶어놓은 것
-
-class Berserker
-{
-public:
-
-	int GetHp() { return _hp; }
-	// 사양 : 체력이 50 이하로 떨어지면 버서커 모드 발동 (강해짐)
-	void SetHp(int hp)
-	{
-		_hp = hp;
-		if (_hp <= 50)
-			SetBerserkerMode();
-	}
-
-private:
-	void SetBerserkerMode()
-	{
-		cout << "매우 강해짐 !" << endl;
-	}
-
-private:
-	int _hp = 100;
-};
-
-int main()
-{
-	Berserker b;
-	TestSuperCar c;
-	
-
-
-	return 0;
-}
+//class Car
+//{
+//public: // (멤버) 접근 지정자
+//	void MoveHandle() {}
+//	void PushPedal() {}
+//	void OpenDoor() {}
+//
+//	void TurnKey()
+//	{
+//		// ...
+//		RunEngine();
+//	}
+//
+//protected:
+//	void DisassembleCar() {} // 차를 분해한다
+//	void RunEngine() {} // 엔진을 구동시킨다
+//	void ConnectCircuit() {} // 전기선 연결
+//
+//public:
+//	// 핸들
+//	// 페달
+//	// 엔진
+//	// 문
+//	// 각종 전기선
+//};
+//
+//class SuperCar : private Car // 상속 접근 지정자
+//{
+//public:
+//	void PushRemoteController()
+//	{
+//		RunEngine();
+//	}
+//	
+//};
+//
+//class TestSuperCar : public SuperCar
+//{
+//public:
+//	void Test()
+//	{
+//		DisassembleCar();
+//	}
+//};
+//
+//// '캡슐화'
+//// 연관된 데이터와 함수를 논리적으로 묶어놓은 것
+//
+//class Berserker
+//{
+//public:
+//
+//	int GetHp() { return _hp; }
+//	// 사양 : 체력이 50 이하로 떨어지면 버서커 모드 발동 (강해짐)
+//	void SetHp(int hp)
+//	{
+//		_hp = hp;
+//		if (_hp <= 50)
+//			SetBerserkerMode();
+//	}
+//
+//private:
+//	void SetBerserkerMode()
+//	{
+//		cout << "매우 강해짐 !" << endl;
+//	}
+//
+//private:
+//	int _hp = 100;
+//};
+//
+//int main()
+//{
+//	Berserker b;
+//	TestSuperCar c;
+//	
+//
+//
+//	return 0;
+//}
