@@ -1,3 +1,0 @@
--Documentation
-
-https://www.ibm.com/docs/ko/i/7.3?topic=concepts-memory-pools

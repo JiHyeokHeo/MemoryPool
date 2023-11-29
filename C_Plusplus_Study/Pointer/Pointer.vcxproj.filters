@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\Array">
+      <UniqueIdentifier>{49cfdd98-9891-4a5a-a3ed-f0a273f650f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Pointer">
+      <UniqueIdentifier>{fb8deb93-361e-4464-b045-b484e411ab97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Practice">
+      <UniqueIdentifier>{563e68d9-ab13-45d7-8523-5604e9b2e93b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Practice\Pointer">
+      <UniqueIdentifier>{baf7118a-e349-43e3-8a72-6e59072bd5da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Practice\TextRPG">
+      <UniqueIdentifier>{4ebb613c-d36c-4da7-b3e8-ee38b228a71b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Practice\String">
+      <UniqueIdentifier>{be92648b-cce2-4e8f-a857-472bc8737f04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Practice\Snail">
+      <UniqueIdentifier>{accaff12-58d0-45a9-ae43-03e5456ec33a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\OOP">
+      <UniqueIdentifier>{50a588cc-fd2c-4058-8c60-7530075bdf5c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Array.cpp">
+      <Filter>소스 파일\Array</Filter>
+    </ClCompile>
+    <ClCompile Include="Pointer_1.cpp">
+      <Filter>소스 파일\Pointer</Filter>
+    </ClCompile>
+    <ClCompile Include="Pointer_2.cpp">
+      <Filter>소스 파일\Pointer</Filter>
+    </ClCompile>
+    <ClCompile Include="Pointer_3.cpp">
+      <Filter>소스 파일\Pointer</Filter>
+    </ClCompile>
+    <ClCompile Include="Reference.cpp">
+      <Filter>소스 파일\Pointer</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrayDif.cpp">
+      <Filter>소스 파일\Pointer</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomNumberMaker.cpp">
+      <Filter>소스 파일\Practice\Pointer</Filter>
+    </ClCompile>
+    <ClCompile Include="DoublePointer.cpp">
+      <Filter>소스 파일\Pointer</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiDimensionalArray.cpp">
+      <Filter>소스 파일\Array</Filter>
+    </ClCompile>
+    <ClCompile Include="FinalPointer.cpp">
+      <Filter>소스 파일\Pointer</Filter>
+    </ClCompile>
+    <ClCompile Include="TextRPG.cpp">
+      <Filter>소스 파일\Practice\TextRPG</Filter>
+    </ClCompile>
+    <ClCompile Include="StringPractice_1.cpp">
+      <Filter>소스 파일\Practice\String</Filter>
+    </ClCompile>
+    <ClCompile Include="SnailProblem.cpp">
+      <Filter>소스 파일\Practice\Snail</Filter>
+    </ClCompile>
+    <ClCompile Include="Constructor.cpp">
+      <Filter>소스 파일\OOP</Filter>
+    </ClCompile>
+    <ClCompile Include="Inheritance.cpp">
+      <Filter>소스 파일\OOP</Filter>
+    </ClCompile>
+    <ClCompile Include="Encapsulation.cpp">
+      <Filter>소스 파일\OOP</Filter>
+    </ClCompile>
+    <ClCompile Include="Polymorphism.cpp">
+      <Filter>소스 파일\OOP</Filter>
+    </ClCompile>
+    <ClCompile Include="MemberIntialize.cpp">
+      <Filter>소스 파일\OOP</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
