@@ -148,6 +148,7 @@
     <ClCompile Include="StringPractice_1.cpp" />
     <ClCompile Include="Struct&amp;Class.cpp" />
     <ClCompile Include="TextRPG.cpp" />
+    <ClCompile Include="TypeCasting.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
