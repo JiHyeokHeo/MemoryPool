@@ -40,6 +40,9 @@
     <Filter Include="소스 파일\OperatorOverloading">
       <UniqueIdentifier>{15fe2fd0-c5a3-4a04-a5b5-fbdab932af1e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\DynamicMemoryAllocation">
+      <UniqueIdentifier>{7deb3550-16a7-43f8-9688-70a04c84114e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Array.cpp">
@@ -101,6 +104,9 @@
     </ClCompile>
     <ClCompile Include="Struct&amp;Class.cpp">
       <Filter>소스 파일\OOP</Filter>
+    </ClCompile>
+    <ClCompile Include="DMA_1.cpp">
+      <Filter>소스 파일\DynamicMemoryAllocation</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
