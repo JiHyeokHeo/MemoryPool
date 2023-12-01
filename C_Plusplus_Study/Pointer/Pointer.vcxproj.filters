@@ -99,5 +99,8 @@
     <ClCompile Include="OperatorOverloading.cpp">
       <Filter>소스 파일\OperatorOverloading</Filter>
     </ClCompile>
+    <ClCompile Include="Struct&amp;Class.cpp">
+      <Filter>소스 파일\OOP</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
