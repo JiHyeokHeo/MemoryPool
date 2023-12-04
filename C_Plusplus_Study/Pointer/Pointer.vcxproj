@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="Array.cpp" />
     <ClCompile Include="ArrayDif.cpp" />
+    <ClCompile Include="Casting.cpp" />
     <ClCompile Include="Copy.cpp" />
     <ClCompile Include="DMA_1.cpp" />
     <ClCompile Include="DoublePointer.cpp" />

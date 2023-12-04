@@ -120,5 +120,8 @@
     <ClCompile Include="Copy.cpp">
       <Filter>소스 파일\DynamicMemoryAllocation</Filter>
     </ClCompile>
+    <ClCompile Include="Casting.cpp">
+      <Filter>소스 파일\TypeCasting</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
