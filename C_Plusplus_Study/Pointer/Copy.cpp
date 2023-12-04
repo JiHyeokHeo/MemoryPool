@@ -3,70 +3,104 @@ using namespace std;
 
 // 얕은 복사 vs 깊은 복사
 
-class Pet
-{
-public:
-	Pet()
+	class Pet
 	{
-		cout << "Pet()" << endl;
-	}
-	~Pet()
-	{
-		cout << "~Pet()" << endl;
-	}
-	Pet(const Pet& pet)
-	{
-		cout << "Pet(const Pet&)" << endl;
-	}
-};
+	public:
+		Pet()
+		{
+			cout << "Pet()" << endl;
+		}
 
-class RabbitPet : public Pet
-{
+		~Pet()
+		{
+			cout << "~Pet()" << endl;
+		}
 
-};
+		Pet(const Pet& pet)
+		{
+			cout << "Pet(const Pet&)" << endl;
+		}
 
-class Knight
-{
-public:
-	Knight()
+		Pet& operator=(const Pet& pet)
+		{
+			cout << "operator= const& Pet" << endl;
+			return *this;
+		}
+	};
+
+	class Player
 	{
-		_pet = new Pet();
-		cout << "Knight()" << endl;
-	}
-	Knight(const Knight& knight)
-	{
-		_hp = knight._hp;
-		_pet = new Pet(*knight._pet); // 깊은 복사
-		cout << "Knight(const knight&)" << endl;
-	}
-	Knight& operator=(const Knight& knight)
-	{
-		_hp = knight._hp;
-		_pet = new Pet(*knight._pet); // 깊은 복사
-		return *this;
-	}
+	public:
+		Player()
+		{
+			cout << "Player()" << endl;
+		}
+		Player(const Player& player)
+		{
+			cout << "Player(const Player&)" << endl;
+			_level = player._level;
+		}
 
-	~Knight()
+		Player& operator=(const Player& player)
+		{
+			cout << "operator=(const Player&)" << endl;
+			_level = player._level;
+			return *this;
+		}
+	public:
+		int _level;
+	};
+
+	class Knight : public Player
 	{
-		delete _pet;
-		cout << "~Knight()" << endl;
-	}
+	public:
+		Knight()
+		{
+	
+		}
+
+		Knight(const Knight& knight) : Player(knight), _pet(knight._pet)
+		{
+			_hp = knight._hp;
+			_pet = new Pet(*knight._pet); // 깊은 복사
+			cout << "Knight(const knight&)" << endl;
+		}
+	
+		Knight& operator=(const Knight& knight)
+		{
+			_hp = knight._hp;
+			Player::operator=(knight);
+		
+			_pet = new Pet(*knight._pet); // 깊은 복사
+
+			_pet2 = knight._pet2;
+			return *this;
+		}
+
+		~Knight()
+		{
+			delete _pet;
+			_pet = nullptr;
+		}
 
 
-public:
-	int _hp = 100;
-	Pet* _pet = nullptr;
-};
+	public:
+		int _hp = 100;
+		Pet* _pet = nullptr;
+		Pet _pet2;
+	};
 
 int main()
 {
 	Knight knight; // 기본 생성자
 	knight._hp = 200;
-
-	Knight knight2 = knight; // 복사 생성자
+	knight._level = 99;
+	//cout << "-------------------복사 생성자----------------" << endl;
+	//Knight knight2 = knight; // 복사 생성자
 	//Knight knight3(knight);
 
 	Knight knight3; // 기본 생성자
+	cout << "-------------------복사 대입 연산자----------------" << endl;
 	knight3 = knight; // 복사 대입 연산자
 
 	// [복사 생성자] + [복사 대입 연산자]
@@ -89,6 +123,27 @@ int main()
 	// Stack : Knight2 [ hp 0x2000 ] -> Heap 0x2000 Pet[    ] 
 	// Stack : Knight3 [ hp 0x3000 ] -> Heap 0x3000 Pet[    ]
 
+	// 실험)
+	// - 암시적 복사 생성자 Steps
+	// 1) 부모 클래스의 복사 생성자 호출
+	// 2) 멤버 클래스의 복사 생성자 호출
+	// 3) 멤버가 기본 타입일 경우 메모리 복사 (얕은 복사 Shallow Copy)
+	// - 명시적 복사 생성자 Steps
+	// 1) 부모 클래스의 기본 생성자 호출
+	// 2) 멤버 클래스의 기본 생성자 호출
+
+	// - 암시적 복사 대입 연산자 Steps
+	// 1) 부모 클래스의 복사 대입 연산자 호출
+	// 2) 멤버 클래스의 복사 대입 연산자 호출
+	// 3) 멤버가 기본 타입일 경우 메모리 복사 (얕은 복사 Shallow Copy)
+	// - 명시적 복사 대입 연산자 Steps
+	// 1) 알아서 해주는거 없음
+
+	// 왜 이렇게 혼란스러울까?
+	// 객체를 '복사' 한다는 것은 두 객체의 값들을 일치시키려는 것
+	// 따라서 기본적으로 얕은 복사 (Shallow Copy) 방식으로 동작
+
+	// 명시적 복사 -> [모든 책임]을 프로그래머한테 위임하겠다는 의미
 
 	return 0;
 }
