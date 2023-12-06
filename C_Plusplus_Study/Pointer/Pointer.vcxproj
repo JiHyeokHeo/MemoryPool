@@ -136,6 +136,7 @@
     <ClCompile Include="FinalPointer.cpp" />
     <ClCompile Include="ForwardDeclaration.cpp" />
     <ClCompile Include="FunctionPointer.cpp" />
+    <ClCompile Include="FunctionPointer2.cpp" />
     <ClCompile Include="MemberIntialize.cpp" />
     <ClCompile Include="MultiDimensionalArray.cpp" />
     <ClCompile Include="Constructor.cpp" />

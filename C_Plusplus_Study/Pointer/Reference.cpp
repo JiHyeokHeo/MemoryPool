@@ -1,6 +1,6 @@
-#include <iostream>
-using namespace std;
-
+//#include <iostream>
+//using namespace std;
+//
 // // 참조
 //
 //struct StatInfo
@@ -73,9 +73,9 @@ using namespace std;
 //	// '원격' 바구니의 내용물을 바꿀 수 없음
 //
 //	// info[ 주소값 ]   주소값 [ 데이터 ]
-//	//info = &globalInfo;
+//	info = &globalInfo;
 //
-//	//info->hp = 10000;
+//	info->hp = 10000;
 //}
 //
 //// StatInfo 구조체가 1000바이트짜리 대형 구조체라면?
