@@ -134,6 +134,8 @@
     <ClCompile Include="DMA_1.cpp" />
     <ClCompile Include="DoublePointer.cpp" />
     <ClCompile Include="FinalPointer.cpp" />
+    <ClCompile Include="ForwardDeclaration.cpp" />
+    <ClCompile Include="FunctionPointer.cpp" />
     <ClCompile Include="MemberIntialize.cpp" />
     <ClCompile Include="MultiDimensionalArray.cpp" />
     <ClCompile Include="Constructor.cpp" />

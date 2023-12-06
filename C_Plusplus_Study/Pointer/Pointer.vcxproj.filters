@@ -42,6 +42,12 @@
     <Filter Include="소스 파일\TypeCasting">
       <UniqueIdentifier>{37d7744b-7f5e-4156-9299-822736b68d10}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\ForwardDeclaration">
+      <UniqueIdentifier>{351c723e-fe84-43e2-8fa3-5f6cb7be7d08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\FunctionPointer">
+      <UniqueIdentifier>{41c18d00-081c-46cf-9dbf-6106916841e4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Array.cpp">
@@ -118,6 +124,12 @@
     </ClCompile>
     <ClCompile Include="Casting.cpp">
       <Filter>소스 파일\TypeCasting</Filter>
+    </ClCompile>
+    <ClCompile Include="ForwardDeclaration.cpp">
+      <Filter>소스 파일\ForwardDeclaration</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionPointer.cpp">
+      <Filter>소스 파일\FunctionPointer</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

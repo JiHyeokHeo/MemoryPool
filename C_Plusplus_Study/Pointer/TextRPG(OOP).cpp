@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 #include "Game.h"
+
 // TextRPG #4
 
 int main()
@@ -13,7 +14,7 @@ int main()
 	while (true)
 	{
 		game.Update();
-	}
+	}	
 
 	return 0;
 }
