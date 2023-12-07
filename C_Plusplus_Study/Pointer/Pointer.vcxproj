@@ -159,6 +159,7 @@
     <ClCompile Include="FunctionTemplate.cpp" />
     <ClCompile Include="TextRPG.cpp" />
     <ClCompile Include="TypeCasting.cpp" />
+    <ClCompile Include="Vector.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

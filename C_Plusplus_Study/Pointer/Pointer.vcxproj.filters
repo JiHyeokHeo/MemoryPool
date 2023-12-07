@@ -57,6 +57,12 @@
     <Filter Include="소스 파일\Template">
       <UniqueIdentifier>{4241bac8-3909-40c9-856a-0793b5642f7f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\STL">
+      <UniqueIdentifier>{e290465e-508d-4994-8f15-f37e7dedc2c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\STL\Vector">
+      <UniqueIdentifier>{8af68068-05d4-47f1-ba04-c5719f9f9a63}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Array.cpp">
@@ -154,6 +160,9 @@
     </ClCompile>
     <ClCompile Include="CallBackFunction.cpp">
       <Filter>소스 파일\Function\Functor</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector.cpp">
+      <Filter>소스 파일\STL\Vector</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
