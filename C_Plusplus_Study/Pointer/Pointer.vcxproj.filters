@@ -45,11 +45,17 @@
     <Filter Include="소스 파일\ForwardDeclaration">
       <UniqueIdentifier>{351c723e-fe84-43e2-8fa3-5f6cb7be7d08}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\FunctionPointer">
+    <Filter Include="소스 파일\Function">
+      <UniqueIdentifier>{8b512392-567e-4b9e-8adb-258929892804}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Function\Functor">
+      <UniqueIdentifier>{c50d3b20-9cf6-44ad-81d2-62db0ab6c073}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Function\FunctionPointer">
       <UniqueIdentifier>{41c18d00-081c-46cf-9dbf-6106916841e4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\Functor">
-      <UniqueIdentifier>{c50d3b20-9cf6-44ad-81d2-62db0ab6c073}</UniqueIdentifier>
+    <Filter Include="소스 파일\Template">
+      <UniqueIdentifier>{4241bac8-3909-40c9-856a-0793b5642f7f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -132,13 +138,16 @@
       <Filter>소스 파일\ForwardDeclaration</Filter>
     </ClCompile>
     <ClCompile Include="FunctionPointer.cpp">
-      <Filter>소스 파일\FunctionPointer</Filter>
+      <Filter>소스 파일\Function\FunctionPointer</Filter>
     </ClCompile>
     <ClCompile Include="FunctionPointer2.cpp">
-      <Filter>소스 파일\FunctionPointer</Filter>
+      <Filter>소스 파일\Function\FunctionPointer</Filter>
     </ClCompile>
     <ClCompile Include="Functor.cpp">
-      <Filter>소스 파일\Functor</Filter>
+      <Filter>소스 파일\Function\Functor</Filter>
+    </ClCompile>
+    <ClCompile Include="Template.cpp">
+      <Filter>소스 파일\Template</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
