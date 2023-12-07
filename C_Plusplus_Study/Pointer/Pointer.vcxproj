@@ -145,6 +145,7 @@
     <ClCompile Include="Constructor.cpp" />
     <ClCompile Include="Inheritance.cpp" />
     <ClCompile Include="Encapsulation.cpp" />
+    <ClCompile Include="MyVector.cpp" />
     <ClCompile Include="OperatorOverloading.cpp" />
     <ClCompile Include="PointerTypeCasting.cpp" />
     <ClCompile Include="Pointer_1.cpp" />
