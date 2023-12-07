@@ -140,6 +140,7 @@
     <ClCompile Include="FunctionPointer.cpp" />
     <ClCompile Include="FunctionPointer2.cpp" />
     <ClCompile Include="Functor.cpp" />
+    <ClCompile Include="List.cpp" />
     <ClCompile Include="MemberIntialize.cpp" />
     <ClCompile Include="MultiDimensionalArray.cpp" />
     <ClCompile Include="Constructor.cpp" />
