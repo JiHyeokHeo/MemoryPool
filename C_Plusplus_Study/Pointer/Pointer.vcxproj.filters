@@ -48,6 +48,9 @@
     <Filter Include="소스 파일\FunctionPointer">
       <UniqueIdentifier>{41c18d00-081c-46cf-9dbf-6106916841e4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Functor">
+      <UniqueIdentifier>{c50d3b20-9cf6-44ad-81d2-62db0ab6c073}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Array.cpp">
@@ -133,6 +136,9 @@
     </ClCompile>
     <ClCompile Include="FunctionPointer2.cpp">
       <Filter>소스 파일\FunctionPointer</Filter>
+    </ClCompile>
+    <ClCompile Include="Functor.cpp">
+      <Filter>소스 파일\Functor</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
