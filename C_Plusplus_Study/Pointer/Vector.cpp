@@ -113,5 +113,41 @@ int main()
 		cout << (*it) << endl;
 	}
 
+	// *************************************
+	//  완전 중요함 기본기를 바로 알 수 있는 내용
+	// - 중간 삽입/삭제 ( BAD )
+	// - 처음/끝 삽입 삭제 ( BAD / GOOD )
+	// - 임의 접근 (Random Access) 
+
+	// vector = 동적 배열 = 동적으로 커지는 배열 = 배열
+	// 원소가 하나의 메모리 블록에 연속하게 저장된다 !!!
+
+	// [                     ]
+	// [0] [1] [2] [3] [4] [ ] [ ]
+
+	//v.push_back(1);
+	//v.pop_back();
+
+	// i번째 데이터는 어디 있습니까?
+	//v[2] = 3;
+
+	//vector<int>:: iterator insertit = v.insert(v.begin() + 2, 5); // 넣은 위치를 가르키고 있다.
+	//vector<int>::iterator eraseit1 = v.erase(v.begin() + 2); // 삭제한 위치를 가르키고 있다.
+	//vector<int>::iterator eraseit2 = v.erase(v.begin() + 2, v.begin() + 4); // 마지막으로 넘겨준 친구는 포함 x
+
+	// 쭉~ 스캔을 하면서, 3이라는 데이터가 있으면 일괄 삭제하고 싶다. 
+	for (vector<int>::iterator it = v.begin(); it != v.end();)
+	{
+		int data = *it;
+		if (data == 3)
+		{
+			it = v.erase(it);
+		}
+		else
+		{
+			++it;
+		}
+	}
+
 	return 0;
 }
