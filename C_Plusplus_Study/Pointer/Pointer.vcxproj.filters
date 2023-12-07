@@ -146,7 +146,10 @@
     <ClCompile Include="Functor.cpp">
       <Filter>소스 파일\Function\Functor</Filter>
     </ClCompile>
-    <ClCompile Include="Template.cpp">
+    <ClCompile Include="FunctionTemplate.cpp">
+      <Filter>소스 파일\Template</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassTemplate.cpp">
       <Filter>소스 파일\Template</Filter>
     </ClCompile>
   </ItemGroup>

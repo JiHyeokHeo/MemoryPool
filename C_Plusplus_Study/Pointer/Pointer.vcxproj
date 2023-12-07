@@ -130,6 +130,7 @@
     <ClCompile Include="Array.cpp" />
     <ClCompile Include="ArrayDif.cpp" />
     <ClCompile Include="Casting.cpp" />
+    <ClCompile Include="ClassTemplate.cpp" />
     <ClCompile Include="Copy.cpp" />
     <ClCompile Include="DMA_1.cpp" />
     <ClCompile Include="DoublePointer.cpp" />
@@ -154,7 +155,7 @@
     <ClCompile Include="SnailProblem.cpp" />
     <ClCompile Include="StringPractice_1.cpp" />
     <ClCompile Include="Struct&amp;Class.cpp" />
-    <ClCompile Include="Template.cpp" />
+    <ClCompile Include="FunctionTemplate.cpp" />
     <ClCompile Include="TextRPG.cpp" />
     <ClCompile Include="TypeCasting.cpp" />
   </ItemGroup>
