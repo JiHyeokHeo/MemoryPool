@@ -152,5 +152,8 @@
     <ClCompile Include="ClassTemplate.cpp">
       <Filter>소스 파일\Template</Filter>
     </ClCompile>
+    <ClCompile Include="CallBackFunction.cpp">
+      <Filter>소스 파일\Function\Functor</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
