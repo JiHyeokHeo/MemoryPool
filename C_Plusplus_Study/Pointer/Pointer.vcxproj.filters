@@ -60,11 +60,17 @@
     <Filter Include="소스 파일\STL">
       <UniqueIdentifier>{e290465e-508d-4994-8f15-f37e7dedc2c7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\STL\Vector">
-      <UniqueIdentifier>{8af68068-05d4-47f1-ba04-c5719f9f9a63}</UniqueIdentifier>
+    <Filter Include="소스 파일\STL\SequenceContainter">
+      <UniqueIdentifier>{38ceac2b-45e9-4776-8aa4-374515692923}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\STL\List">
+    <Filter Include="소스 파일\STL\SequenceContainter\List">
       <UniqueIdentifier>{34dfe3a4-3692-4273-8267-0003b09aeda8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\STL\SequenceContainter\Deque">
+      <UniqueIdentifier>{eb85f7b4-5ebd-4af7-89e3-f649dbe9b097}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\STL\SequenceContainter\Vector">
+      <UniqueIdentifier>{8af68068-05d4-47f1-ba04-c5719f9f9a63}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -165,16 +171,19 @@
       <Filter>소스 파일\Function\Functor</Filter>
     </ClCompile>
     <ClCompile Include="Vector.cpp">
-      <Filter>소스 파일\STL\Vector</Filter>
+      <Filter>소스 파일\STL\SequenceContainter\Vector</Filter>
     </ClCompile>
     <ClCompile Include="MyVector.cpp">
-      <Filter>소스 파일\STL\Vector</Filter>
+      <Filter>소스 파일\STL\SequenceContainter\Vector</Filter>
     </ClCompile>
     <ClCompile Include="List.cpp">
-      <Filter>소스 파일\STL\List</Filter>
+      <Filter>소스 파일\STL\SequenceContainter\List</Filter>
     </ClCompile>
     <ClCompile Include="MyList.cpp">
-      <Filter>소스 파일\STL\List</Filter>
+      <Filter>소스 파일\STL\SequenceContainter\List</Filter>
+    </ClCompile>
+    <ClCompile Include="Deque.cpp">
+      <Filter>소스 파일\STL\SequenceContainter\Deque</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

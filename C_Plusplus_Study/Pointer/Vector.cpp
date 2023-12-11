@@ -131,9 +131,9 @@
 //	// i번째 데이터는 어디 있습니까?
 //	//v[2] = 3;
 //
-//	//vector<int>:: iterator insertit = v.insert(v.begin() + 2, 5); // 넣은 위치를 가르키고 있다.
-//	//vector<int>::iterator eraseit1 = v.erase(v.begin() + 2); // 삭제한 위치를 가르키고 있다.
-//	//vector<int>::iterator eraseit2 = v.erase(v.begin() + 2, v.begin() + 4); // 마지막으로 넘겨준 친구는 포함 x
+//	vector<int>:: iterator insertit = v.insert(v.begin() + 2, 5); // 넣은 위치를 가르키고 있다.
+//	vector<int>::iterator eraseit1 = v.erase(v.begin() + 2); // 삭제한 위치를 가르키고 있다.
+//	vector<int>::iterator eraseit2 = v.erase(v.begin() + 2, v.begin() + 4); // 마지막으로 넘겨준 친구는 포함 x
 //
 //	// 쭉~ 스캔을 하면서, 3이라는 데이터가 있으면 일괄 삭제하고 싶다. 
 //	for (vector<int>::iterator it = v.begin(); it != v.end();)
