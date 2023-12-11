@@ -75,6 +75,9 @@
     <Filter Include="소스 파일\STL\Aassociate Container">
       <UniqueIdentifier>{12b2ec44-65a4-4213-8d1d-133cbce9f05a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Practice\STL">
+      <UniqueIdentifier>{c4489dfe-3d19-4bf7-88f6-3c229c56f35b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Array.cpp">
@@ -193,6 +196,9 @@
     </ClCompile>
     <ClCompile Include="Set_Multimap_Multiset.cpp">
       <Filter>소스 파일\STL\Aassociate Container</Filter>
+    </ClCompile>
+    <ClCompile Include="STLPractice.cpp">
+      <Filter>소스 파일\Practice\STL</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
