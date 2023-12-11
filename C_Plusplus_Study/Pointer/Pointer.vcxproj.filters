@@ -191,5 +191,8 @@
     <ClCompile Include="Map.cpp">
       <Filter>소스 파일\STL\Aassociate Container</Filter>
     </ClCompile>
+    <ClCompile Include="Set_Multimap_Multiset.cpp">
+      <Filter>소스 파일\STL\Aassociate Container</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
