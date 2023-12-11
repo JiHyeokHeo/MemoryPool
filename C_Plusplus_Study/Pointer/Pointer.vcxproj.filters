@@ -72,6 +72,9 @@
     <Filter Include="소스 파일\STL\SequenceContainter\Vector">
       <UniqueIdentifier>{8af68068-05d4-47f1-ba04-c5719f9f9a63}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\STL\Aassociate Container">
+      <UniqueIdentifier>{12b2ec44-65a4-4213-8d1d-133cbce9f05a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Array.cpp">
@@ -184,6 +187,9 @@
     </ClCompile>
     <ClCompile Include="Deque.cpp">
       <Filter>소스 파일\STL\SequenceContainter\Deque</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>소스 파일\STL\Aassociate Container</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
