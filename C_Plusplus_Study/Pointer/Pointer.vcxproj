@@ -155,6 +155,7 @@
     <ClCompile Include="MyVector.cpp" />
     <ClCompile Include="Nullptr.cpp" />
     <ClCompile Include="OperatorOverloading.cpp" />
+    <ClCompile Include="Override_Final.cpp" />
     <ClCompile Include="PointerTypeCasting.cpp" />
     <ClCompile Include="Pointer_1.cpp" />
     <ClCompile Include="Pointer_2.cpp" />
