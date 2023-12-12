@@ -134,6 +134,7 @@
     <ClCompile Include="Casting.cpp" />
     <ClCompile Include="ClassTemplate.cpp" />
     <ClCompile Include="Copy.cpp" />
+    <ClCompile Include="delete.cpp" />
     <ClCompile Include="Deque.cpp" />
     <ClCompile Include="DMA_1.cpp" />
     <ClCompile Include="DoublePointer.cpp" />
