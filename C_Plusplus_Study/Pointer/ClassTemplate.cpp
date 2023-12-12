@@ -1,11 +1,11 @@
 //#include <iostream>
 //using namespace std;
 //
-//// 클래스 템플릿
+// 클래스 템플릿
 //
-//// typename T을 붙이면 '조커카드' (어떤 타입도 다 넣을 수 있음)
-//// 그런데 무조건 typename을 붙여야 하는 것은 아니다.
-//// template < > 안에 들어가는건 [골라줘야 하는 목록]이라고 볼 수 있음.
+// typename T을 붙이면 '조커카드' (어떤 타입도 다 넣을 수 있음)
+// 그런데 무조건 typename을 붙여야 하는 것은 아니다.
+// template < > 안에 들어가는건 [골라줘야 하는 목록]이라고 볼 수 있음.
 //template<typename T, int SIZE = 10>
 //class RandomBox
 //{
@@ -20,7 +20,7 @@
 //	T _data[SIZE];
 //};
 //
-//// 템플릿 특수화
+// 템플릿 특수화
 //template<int SIZE>
 //class RandomBox<double, SIZE>
 //{

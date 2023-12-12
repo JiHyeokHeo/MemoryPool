@@ -137,6 +137,7 @@
     <ClCompile Include="Deque.cpp" />
     <ClCompile Include="DMA_1.cpp" />
     <ClCompile Include="DoublePointer.cpp" />
+    <ClCompile Include="EnumClass.cpp" />
     <ClCompile Include="FinalPointer.cpp" />
     <ClCompile Include="ForwardDeclaration.cpp" />
     <ClCompile Include="FunctionPointer.cpp" />
