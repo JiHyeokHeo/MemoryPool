@@ -42,9 +42,6 @@
     <Filter Include="소스 파일\TypeCasting">
       <UniqueIdentifier>{37d7744b-7f5e-4156-9299-822736b68d10}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\ForwardDeclaration">
-      <UniqueIdentifier>{351c723e-fe84-43e2-8fa3-5f6cb7be7d08}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\Function">
       <UniqueIdentifier>{8b512392-567e-4b9e-8adb-258929892804}</UniqueIdentifier>
     </Filter>
@@ -80,6 +77,12 @@
     </Filter>
     <Filter Include="소스 파일\ModernCpp">
       <UniqueIdentifier>{945290e2-9ac0-4acc-8b69-f57bce3d5750}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\ForwardDeclaration">
+      <UniqueIdentifier>{351c723e-fe84-43e2-8fa3-5f6cb7be7d08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\STL\Algorithm">
+      <UniqueIdentifier>{b33110b2-e684-47bd-b694-d8a71b7830e9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -200,9 +203,6 @@
     <ClCompile Include="Set_Multimap_Multiset.cpp">
       <Filter>소스 파일\STL\Aassociate Container</Filter>
     </ClCompile>
-    <ClCompile Include="STLPractice.cpp">
-      <Filter>소스 파일\Practice\STL</Filter>
-    </ClCompile>
     <ClCompile Include="Auto.cpp">
       <Filter>소스 파일\ModernCpp</Filter>
     </ClCompile>
@@ -218,7 +218,7 @@
     <ClCompile Include="EnumClass.cpp">
       <Filter>소스 파일\ModernCpp</Filter>
     </ClCompile>
-    <ClCompile Include="delete.cpp">
+    <ClCompile Include="Delete.cpp">
       <Filter>소스 파일\ModernCpp</Filter>
     </ClCompile>
     <ClCompile Include="Override_Final.cpp">
@@ -229,6 +229,12 @@
     </ClCompile>
     <ClCompile Include="ForwardingReference.cpp">
       <Filter>소스 파일\ModernCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Lambda.cpp">
+      <Filter>소스 파일\ModernCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="STLPractice.cpp">
+      <Filter>소스 파일\STL\Algorithm</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

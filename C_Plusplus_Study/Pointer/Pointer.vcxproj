@@ -134,7 +134,7 @@
     <ClCompile Include="Casting.cpp" />
     <ClCompile Include="ClassTemplate.cpp" />
     <ClCompile Include="Copy.cpp" />
-    <ClCompile Include="delete.cpp" />
+    <ClCompile Include="Delete.cpp" />
     <ClCompile Include="Deque.cpp" />
     <ClCompile Include="DMA_1.cpp" />
     <ClCompile Include="DoublePointer.cpp" />
@@ -145,6 +145,7 @@
     <ClCompile Include="FunctionPointer.cpp" />
     <ClCompile Include="FunctionPointer2.cpp" />
     <ClCompile Include="Functor.cpp" />
+    <ClCompile Include="Lambda.cpp" />
     <ClCompile Include="List.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="MemberIntialize.cpp" />
