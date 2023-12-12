@@ -151,6 +151,7 @@
     <ClCompile Include="Encapsulation.cpp" />
     <ClCompile Include="MyList.cpp" />
     <ClCompile Include="MyVector.cpp" />
+    <ClCompile Include="Nullptr.cpp" />
     <ClCompile Include="OperatorOverloading.cpp" />
     <ClCompile Include="PointerTypeCasting.cpp" />
     <ClCompile Include="Pointer_1.cpp" />
