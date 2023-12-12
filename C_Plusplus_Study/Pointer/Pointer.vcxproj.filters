@@ -78,6 +78,9 @@
     <Filter Include="소스 파일\Practice\STL">
       <UniqueIdentifier>{c4489dfe-3d19-4bf7-88f6-3c229c56f35b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\ModernCpp">
+      <UniqueIdentifier>{945290e2-9ac0-4acc-8b69-f57bce3d5750}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Array.cpp">
@@ -199,6 +202,9 @@
     </ClCompile>
     <ClCompile Include="STLPractice.cpp">
       <Filter>소스 파일\Practice\STL</Filter>
+    </ClCompile>
+    <ClCompile Include="Auto.cpp">
+      <Filter>소스 파일\ModernCpp</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
