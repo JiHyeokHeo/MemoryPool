@@ -167,6 +167,7 @@
     <ClCompile Include="Reference.cpp" />
     <ClCompile Include="Rvalue_Reference.cpp" />
     <ClCompile Include="Set_Multimap_Multiset.cpp" />
+    <ClCompile Include="SmartPointer.cpp" />
     <ClCompile Include="SnailProblem.cpp" />
     <ClCompile Include="STLPractice.cpp" />
     <ClCompile Include="StringPractice_1.cpp" />

@@ -236,5 +236,8 @@
     <ClCompile Include="STLPractice.cpp">
       <Filter>소스 파일\STL\Algorithm</Filter>
     </ClCompile>
+    <ClCompile Include="SmartPointer.cpp">
+      <Filter>소스 파일\ModernCpp</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
