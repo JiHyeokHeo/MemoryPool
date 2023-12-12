@@ -141,6 +141,7 @@
     <ClCompile Include="EnumClass.cpp" />
     <ClCompile Include="FinalPointer.cpp" />
     <ClCompile Include="ForwardDeclaration.cpp" />
+    <ClCompile Include="ForwardingReference.cpp" />
     <ClCompile Include="FunctionPointer.cpp" />
     <ClCompile Include="FunctionPointer2.cpp" />
     <ClCompile Include="Functor.cpp" />
