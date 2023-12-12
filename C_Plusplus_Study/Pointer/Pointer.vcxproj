@@ -168,6 +168,7 @@
     <ClCompile Include="FunctionTemplate.cpp" />
     <ClCompile Include="TextRPG.cpp" />
     <ClCompile Include="TypeCasting.cpp" />
+    <ClCompile Include="Using.cpp" />
     <ClCompile Include="Vector.cpp" />
     <ClCompile Include="{}.cpp" />
   </ItemGroup>
