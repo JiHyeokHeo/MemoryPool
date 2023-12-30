@@ -158,13 +158,13 @@
 //		v.push_back(2);
 //
 //		// 이 방식도 있지만 쉽진 않다
-//		for (vector<int>::iterator it = v.begin(); it != v.end(); )
-//		{
-//			if (*it % 2 != 0)
-//				it = v.erase(it);
-//			else
-//				++it;
-//		}
+//		//for (vector<int>::iterator it = v.begin(); it != v.end(); )
+//		//{
+//		//	if (*it % 2 != 0)
+//		//		it = v.erase(it);
+//		//	else
+//		//		++it;
+//		//}
 //
 //		// 1 4 3 5 8 2
 //		// 4 8 2 5 8 2
@@ -180,8 +180,8 @@
 //			}
 //		};
 //
-//		//vector<int>::iterator endIt = std::remove_if(v.begin(), v.end(), IsOdd());
-//		//v.erase(endIt, v.end());
+//		vector<int>::iterator endIt = std::remove_if(v.begin(), v.end(), IsOdd());
+//		v.erase(endIt, v.end());
 //	}
 //
 //

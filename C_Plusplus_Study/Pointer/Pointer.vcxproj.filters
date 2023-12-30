@@ -54,24 +54,6 @@
     <Filter Include="소스 파일\Template">
       <UniqueIdentifier>{4241bac8-3909-40c9-856a-0793b5642f7f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\STL">
-      <UniqueIdentifier>{e290465e-508d-4994-8f15-f37e7dedc2c7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\STL\SequenceContainter">
-      <UniqueIdentifier>{38ceac2b-45e9-4776-8aa4-374515692923}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\STL\SequenceContainter\List">
-      <UniqueIdentifier>{34dfe3a4-3692-4273-8267-0003b09aeda8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\STL\SequenceContainter\Deque">
-      <UniqueIdentifier>{eb85f7b4-5ebd-4af7-89e3-f649dbe9b097}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\STL\SequenceContainter\Vector">
-      <UniqueIdentifier>{8af68068-05d4-47f1-ba04-c5719f9f9a63}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\STL\Aassociate Container">
-      <UniqueIdentifier>{12b2ec44-65a4-4213-8d1d-133cbce9f05a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\Practice\STL">
       <UniqueIdentifier>{c4489dfe-3d19-4bf7-88f6-3c229c56f35b}</UniqueIdentifier>
     </Filter>
@@ -81,7 +63,25 @@
     <Filter Include="소스 파일\ForwardDeclaration">
       <UniqueIdentifier>{351c723e-fe84-43e2-8fa3-5f6cb7be7d08}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\STL\Algorithm">
+    <Filter Include="소스 파일\Practice\String\STL">
+      <UniqueIdentifier>{e290465e-508d-4994-8f15-f37e7dedc2c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Practice\String\STL\SequenceContainter">
+      <UniqueIdentifier>{38ceac2b-45e9-4776-8aa4-374515692923}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Practice\String\STL\SequenceContainter\List">
+      <UniqueIdentifier>{34dfe3a4-3692-4273-8267-0003b09aeda8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Practice\String\STL\SequenceContainter\Deque">
+      <UniqueIdentifier>{eb85f7b4-5ebd-4af7-89e3-f649dbe9b097}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Practice\String\STL\SequenceContainter\Vector">
+      <UniqueIdentifier>{8af68068-05d4-47f1-ba04-c5719f9f9a63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Practice\String\STL\Aassociate Container">
+      <UniqueIdentifier>{12b2ec44-65a4-4213-8d1d-133cbce9f05a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Practice\String\STL\Algorithm">
       <UniqueIdentifier>{b33110b2-e684-47bd-b694-d8a71b7830e9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -183,25 +183,25 @@
       <Filter>소스 파일\Function\Functor</Filter>
     </ClCompile>
     <ClCompile Include="Vector.cpp">
-      <Filter>소스 파일\STL\SequenceContainter\Vector</Filter>
+      <Filter>소스 파일\Practice\String\STL\SequenceContainter\Vector</Filter>
     </ClCompile>
     <ClCompile Include="MyVector.cpp">
-      <Filter>소스 파일\STL\SequenceContainter\Vector</Filter>
+      <Filter>소스 파일\Practice\String\STL\SequenceContainter\Vector</Filter>
     </ClCompile>
     <ClCompile Include="List.cpp">
-      <Filter>소스 파일\STL\SequenceContainter\List</Filter>
+      <Filter>소스 파일\Practice\String\STL\SequenceContainter\List</Filter>
     </ClCompile>
     <ClCompile Include="MyList.cpp">
-      <Filter>소스 파일\STL\SequenceContainter\List</Filter>
+      <Filter>소스 파일\Practice\String\STL\SequenceContainter\List</Filter>
     </ClCompile>
     <ClCompile Include="Deque.cpp">
-      <Filter>소스 파일\STL\SequenceContainter\Deque</Filter>
+      <Filter>소스 파일\Practice\String\STL\SequenceContainter\Deque</Filter>
     </ClCompile>
     <ClCompile Include="Map.cpp">
-      <Filter>소스 파일\STL\Aassociate Container</Filter>
+      <Filter>소스 파일\Practice\String\STL\Aassociate Container</Filter>
     </ClCompile>
     <ClCompile Include="Set_Multimap_Multiset.cpp">
-      <Filter>소스 파일\STL\Aassociate Container</Filter>
+      <Filter>소스 파일\Practice\String\STL\Aassociate Container</Filter>
     </ClCompile>
     <ClCompile Include="Auto.cpp">
       <Filter>소스 파일\ModernCpp</Filter>
@@ -234,7 +234,7 @@
       <Filter>소스 파일\ModernCpp</Filter>
     </ClCompile>
     <ClCompile Include="STLPractice.cpp">
-      <Filter>소스 파일\STL\Algorithm</Filter>
+      <Filter>소스 파일\Practice\String\STL\Algorithm</Filter>
     </ClCompile>
     <ClCompile Include="SmartPointer.cpp">
       <Filter>소스 파일\ModernCpp</Filter>

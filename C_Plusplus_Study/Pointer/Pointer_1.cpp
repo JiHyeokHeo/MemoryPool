@@ -1,8 +1,8 @@
-#include <iostream>
-using namespace std;
-
-// 포인터
-
+//#include <iostream>
+//using namespace std;
+//
+// //포인터
+//
 //void SetHp(int* hp)
 //{
 //	*hp = 100;
@@ -53,8 +53,8 @@ using namespace std;
 //	// 0b1010101010101111
 //
 //	// 타입의 불일치
-//	__int64* ptr2 = (_int64*)& number;
-//	*ptr2 = 0xAABBCCDDEEFF;
+//	//__int64* ptr2 = (_int64*)& number;
+//	//*ptr2 = 0xAABBCCDDEEFF;
 //
 //	return 0;
 //}
