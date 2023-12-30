@@ -26,6 +26,12 @@
     <ClCompile Include="ConsoleHelper.cpp">
       <Filter>Board</Filter>
     </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Board.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -37,5 +43,7 @@
     <ClInclude Include="ConsoleHelper.h">
       <Filter>Board</Filter>
     </ClInclude>
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Board.h" />
   </ItemGroup>
 </Project>
