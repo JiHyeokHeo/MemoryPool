@@ -1,77 +1,80 @@
 #include <iostream>
-#include <bitset>
-#include <string.h>
-
+#include <vector>
 using namespace std;
 
-int arr[51][51];
-int T;
-int M, N, K;
-int G_Cnt;
 
-void Find()
+
+template <typename T>
+class Vector
 {
-    int check[4][2] = 
+public:
+    Vector() {};
+    ~Vector()
     {
-        1, 0, // 위
-        0, -1, // 왼
-        -1, 0, //아래
-        0, 1, // 오
+        if (_data)
+            delete[] _data;
     };
 
-    for (int y = 0; y < M; y++)
+    void push_back(const T& val)
     {
-        int tempX = 0;
-        for (int x = 0; x < N; x++)
+        if (_capacity == _size)
         {
-            if (arr[y][x] == 1)
-            {
-                tempX = x;
-                break;
-            }
+            int newCapacity = static_cast<int>(_capacity * 1.5);
+            if (newCapacity == _size)
+                newCapacity++;
+
+            reserve(newCapacity);
         }
 
-      
+        _data[_size] = val;
+        _size++;
     }
 
-}
+    void reserve(int capacity)
+    {
+        if (capacity < _capacity)
+            return;
+
+        _capacity = capacity;
+
+        T* newData = new T[_capacity];
+
+        for (int i = 0; i < _size; i++)
+            newData[i] = _data[i];
+
+        delete[] _data;
+
+        _data = newData;
+    }
+
+    T& operator[](const int& pos) { return _data[pos]; }
+
+    int size() { return _size; }
+    int capacity() { return _capacity; }
+
+public:
+    T* _data;
+    int _size = 0;
+    int _capacity = 0;
+};
+
 
 int main()
 {
-    memset(arr, -1, sizeof(arr));
+    Vector<int> a;
 
-    cin >> T;
-
-    int testCnt = 0;
-    while (testCnt < T)
+    a.push_back(5);
+    a.push_back(8);
+    /*for (int i = 5; i < 100; i++)
     {
-        // 입력
-        for (int i = 0; i < T; i++)
-        {
-            cin >> M >> N >> K;
-        }
+        a.push_back(i);
+    }*/
 
-        // 배열에 대입
-		for (int y = 0; y < N; ++y)
-		{
-			for (int x = 0; x < M; x++)
-			{
-                int tempX, tempY;
-                cin >> tempX, tempY;
-                arr[tempY][tempX] = 1;
-			}
-		}
-
-        // 배추흰지렁이 확인
-        
-
-        // 배열 초기화
-        memset(arr, -1, sizeof(arr));
-
-        // 횟수증가
-        testCnt++;
-    }
-
+    //for (int i = 0; i < 95; i++)
+    //{
+    //    cout << a[i] << " " << a.size() << " " << a.capacity() << endl;
+    //}
+    cout << *(a._data + 1) << endl;
 
     return 0;
 }
