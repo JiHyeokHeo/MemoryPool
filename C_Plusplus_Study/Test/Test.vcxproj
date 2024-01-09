@@ -20,7 +20,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="List.cpp" />
-    <ClCompile Include="Test.cpp" />
+    <ClCompile Include="Stack.cpp" />
+    <ClCompile Include="Vector.cpp" />
+    <ClCompile Include="ttt.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
