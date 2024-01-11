@@ -11,7 +11,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TextRPG", "TextRPG\TextRPG.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "Test\Test.vcxproj", "{9298CCB7-1D27-4C6F-9810-59F1DC8E52AE}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "T11", "T11\T11.vcxproj", "{15172DD3-CA1C-4E04-9459-0A9E795741CF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Maze", "T11\T11.vcxproj", "{15172DD3-CA1C-4E04-9459-0A9E795741CF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Algorithm", "Algorithm\Algorithm.vcxproj", "{76C1EB9A-D50F-4F06-A5D2-4C3665CCFC7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,14 @@ Global
 		{15172DD3-CA1C-4E04-9459-0A9E795741CF}.Release|x64.Build.0 = Release|x64
 		{15172DD3-CA1C-4E04-9459-0A9E795741CF}.Release|x86.ActiveCfg = Release|Win32
 		{15172DD3-CA1C-4E04-9459-0A9E795741CF}.Release|x86.Build.0 = Release|Win32
+		{76C1EB9A-D50F-4F06-A5D2-4C3665CCFC7C}.Debug|x64.ActiveCfg = Debug|x64
+		{76C1EB9A-D50F-4F06-A5D2-4C3665CCFC7C}.Debug|x64.Build.0 = Debug|x64
+		{76C1EB9A-D50F-4F06-A5D2-4C3665CCFC7C}.Debug|x86.ActiveCfg = Debug|Win32
+		{76C1EB9A-D50F-4F06-A5D2-4C3665CCFC7C}.Debug|x86.Build.0 = Debug|Win32
+		{76C1EB9A-D50F-4F06-A5D2-4C3665CCFC7C}.Release|x64.ActiveCfg = Release|x64
+		{76C1EB9A-D50F-4F06-A5D2-4C3665CCFC7C}.Release|x64.Build.0 = Release|x64
+		{76C1EB9A-D50F-4F06-A5D2-4C3665CCFC7C}.Release|x86.ActiveCfg = Release|Win32
+		{76C1EB9A-D50F-4F06-A5D2-4C3665CCFC7C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

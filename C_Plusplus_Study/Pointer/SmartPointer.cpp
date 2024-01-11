@@ -105,12 +105,12 @@
 //{
 //	// 스마트 포인터 : 포인터를 알맞는 정책에 따라 관리하는 객체 (포인터를 래핑해서 사용)
 //	// shared_ptr, weak_ptr, unique_ptr
-//	//SharedPtr<Knight> k2;
+//	SharedPtr<Knight> k2;
 //
-//	//{
-//	//	SharedPtr<Knight> k1(new Knight());
-//	//	k2 = k1;
-//	//}
+//	{
+//		SharedPtr<Knight> k1(new Knight());
+//		k2 = k1;
+//	}
 //	
 //	shared_ptr<Knight>k1 = make_shared<Knight>();
 //	

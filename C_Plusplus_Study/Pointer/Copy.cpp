@@ -96,12 +96,12 @@ int main()
 	knight._hp = 200;
 	knight._level = 99;
 	//cout << "-------------------복사 생성자----------------" << endl;
-	//Knight knight2 = knight; // 복사 생성자
-	//Knight knight3(knight);
+	Knight knight2 = knight; // 복사 생성자
+	Knight knight3(knight);
 
-	Knight knight3; // 기본 생성자
+	Knight knight4; // 기본 생성자
 	cout << "-------------------복사 대입 연산자----------------" << endl;
-	knight3 = knight; // 복사 대입 연산자
+	knight4 = knight; // 복사 대입 연산자
 
 	// [복사 생성자] + [복사 대입 연산자]
 	// 둘 다 안만들어주면 컴파일러 '암시적으로' 만들어준다
