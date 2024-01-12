@@ -1,38 +1,74 @@
 #include <iostream>
+#include <list>
 #include <vector>
-
+#include <queue>
 using namespace std;
 
-class Knight
+vector<vector<int>> adjacent;
+vector<bool> discovered;
+
+void CreateGraph()
 {
-public:
-    Knight() { cout << "생성자 호출" << endl; }
-    Knight(const Knight& a) { cout << "복사 생성자 호출" << endl; }
-    ~Knight() { cout << "소멸자 호출" << endl; }
+	adjacent = vector<vector<int>>(6);
 
-public:
-    int _hp = 100;
+	//// 인접 리스트
+	//adjacent[0].push_back(1);
+	//adjacent[0].push_back(3);
+	//adjacent[1].push_back(0);
+	//adjacent[1].push_back(2);
+	//adjacent[1].push_back(3);
+	//adjacent[3].push_back(4);
+	//adjacent[5].push_back(4);
 
-    void SetHp(Knight* _this, int hp)
-    {
-     
-    }
-};
+	// 인접 행렬
+	adjacent = vector<vector<int>>
+	{
+		{0,1,0,1,0,0},
+		{1,0,1,1,0,0},
+		{0,0,0,0,0,0},
+		{0,0,0,0,1,0},
+		{0,0,0,0,0,0},
+		{0,0,0,0,1,0},
+	};
+}
 
-int main()  
+void BFS(int here)
 {
-   
-    // 
-    {
-        shared_ptr<Knight> knight = make_shared<Knight>();
-        
-        knight->SetHp(knight.get(), 1);
-    }
-    
-    
-    // 생성자가 호출 되고 sethp를 할떄 복사 생성자가 호출이 되며 
-    // setHP 호출스택범위를 넘어가면 소멸자가 호출이 되고
-    // cout 끝난 다음에 Knight c가 소멸자가 호출이 된다.
-    
+	// 너비 기반 탐색
+	
+	// FIFO 처음 들어온게 먼저 나가는 구조
+	queue<int> track;
+	track.push(here);
+	discovered[here] = 1;
+
+	while (track.empty() == false)
+	{
+		int data = track.front();
+		cout << data << endl;
+		for (int i = 0; i < 6; i++)
+		{
+			if (discovered[i] == true)
+				continue;
+
+			if (adjacent[data][i] == 1) 
+			{
+				discovered[i] = true;
+				track.push(i);
+			}
+		}
+		track.pop();
+	}
+
+
+}
+
+int main(void)  
+{
+	CreateGraph();
+
+	discovered = vector<bool>(6, false);
+
+	BFS(0);
+
     return 0;
 }
