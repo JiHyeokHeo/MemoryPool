@@ -8,7 +8,7 @@ void Player::Init(Board* board)
 	_pos = board->GetEnterPos();
 	_board = board;
 
-	Bfs();
+	MyBfs();
 }
 
 void Player::Update(uint64 deltaTick)
@@ -180,3 +180,76 @@ void Player::Bfs()
 
 	std::reverse(_path.begin(), _path.end());
 }
+
+void Player::MyBfs()
+{
+	Pos pos = _pos;
+
+	_path.clear();
+	_path.push_back(pos);
+	// 목적지 도착하기 전에는 계속 실행
+	Pos dest = _board->GetExitPos();
+
+	Pos front[4] =
+	{
+		Pos {-1, 0 }, // up // left // down // right
+		Pos { 0,-1 },
+		Pos { 1,-0 },
+		Pos { 0, 1 },
+	};
+
+	// 사이즈 가져오고 한번 싹 밀기
+	const int32 size = _board->GetSize();
+	vector<vector<bool>> discovered(size, vector<bool>(size, false));
+
+	map<Pos, Pos> parent;
+	discovered[pos.y][pos.x] = true;
+	parent[pos] = pos;
+
+	queue<Pos> data;
+	data.push(pos);
+
+
+	// 데이터가 빌때까지 계속해서 서칭
+	while (data.empty() == false)
+	{
+		pos = data.front(); // 0,0이 튀어나오고
+		data.pop();
+
+		// 상하좌우로 검색을 해야하며
+		for (int check = 0; check < 4; check++)
+		{
+			Pos nextPos = pos + front[check]; // 다음 위치를 가져오고
+			
+			if (discovered[nextPos.y][nextPos.x] == true)
+				continue;
+
+			if (nextPos.y < 0 || nextPos.y >= size || nextPos.x < 0 || nextPos.y >= size
+				|| CanGo(nextPos) == false)
+				continue;
+
+			data.push(nextPos); // 다음 위치를 다시 집어넣고
+			discovered[nextPos.y][nextPos.x] = true;
+			parent[nextPos] = pos;
+		}
+	}
+
+	_path.clear();
+
+	pos = dest;
+
+	// 부모 자신을 만날때까지 계속 순회
+	while (true)
+	{
+		_path.push_back(pos);
+
+		if (pos == parent[pos])
+			break;
+
+		pos = parent[pos];
+	}
+
+	std::reverse(_path.begin(), _path.end());
+
+}
+

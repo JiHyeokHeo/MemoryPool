@@ -22,6 +22,7 @@ private:
 	void RightHand();
 	void Bfs();
 
+	void MyBfs();
 private:
 	Pos			_pos = {};
 	int32		_dir = DIR_UP;
