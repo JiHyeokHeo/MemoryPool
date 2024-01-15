@@ -2,73 +2,98 @@
 #include <list>
 #include <vector>
 #include <queue>
+#include <math.h>
+#include <string>
 using namespace std;
 
+// DFS
 vector<vector<int>> adjacent;
+vector<bool> visited;
+
+// BFS
+vector<vector<int>> adjacent2;
 vector<bool> discovered;
 
-void CreateGraph()
+int N, M, V;
+
+void DFS(int here)
 {
-	adjacent = vector<vector<int>>(6);
+	// 방문했으면 되돌리고
+	if (visited[here])
+		return;
 
-	//// 인접 리스트
-	//adjacent[0].push_back(1);
-	//adjacent[0].push_back(3);
-	//adjacent[1].push_back(0);
-	//adjacent[1].push_back(2);
-	//adjacent[1].push_back(3);
-	//adjacent[3].push_back(4);
-	//adjacent[5].push_back(4);
+	visited[here] = true;
+	cout << here << " ";
 
-	// 인접 행렬
-	adjacent = vector<vector<int>>
+	for (int there = 1; there <= N; there++)
 	{
-		{0,1,0,1,0,0},
-		{1,0,1,1,0,0},
-		{0,0,0,0,0,0},
-		{0,0,0,0,1,0},
-		{0,0,0,0,0,0},
-		{0,0,0,0,1,0},
-	};
+		// 연결이 안되어있으면 넘기고
+		if (adjacent[here][there] == -1)
+			continue;
+
+		// 방문을 안한곳만 검색
+		if (visited[there] == false)
+			DFS(there);
+	}
+
 }
 
 void BFS(int here)
 {
-	// 너비 기반 탐색
-	
-	// FIFO 처음 들어온게 먼저 나가는 구조
-	queue<int> track;
-	track.push(here);
-	discovered[here] = 1;
+	// 선입 선출
+	queue<int> q;
 
-	while (track.empty() == false)
+	q.push(here);
+	discovered[here] = true;
+
+	while (q.empty() == false)
 	{
-		int data = track.front();
-		cout << data << endl;
-		for (int i = 0; i < 6; i++)
+		here = q.front();
+		q.pop();
+
+		cout << here << " ";
+		for (int there = 1; there <= N; there++)
 		{
-			if (discovered[i] == true)
+			// 연결 x 넘기기
+			if (adjacent2[here][there] == -1)
+				continue;
+			// 만약 이미 발견된 곳이라면 넘기기
+			if (discovered[there] == true)
 				continue;
 
-			if (adjacent[data][i] == 1) 
-			{
-				discovered[i] = true;
-				track.push(i);
-			}
+			q.push(there);
+			discovered[there] = true;
 		}
-		track.pop();
-	}
 
+	}
 
 }
 
-int main(void)  
+int main(void)
 {
-	CreateGraph();
+	cin >> N >> M >> V;
 
-	discovered = vector<bool>(6, false);
+	// DFS
+	adjacent = vector<vector<int>>(N + 1, vector<int>(N + 1, -1));
+	visited = vector<bool>(N + 1, false);
 
-	BFS(0);
+	// BFS 자료구조
+	adjacent2 = vector<vector<int>>(N + 1, vector<int>(N + 1, -1));
+	discovered = vector<bool>(N + 1, false);
+	for (int i = 0; i < M; i++)
+	{
+		int tempY;
+		int tempX;
+		cin >> tempY >> tempX;
+		adjacent[tempY][tempX] = 1;
+		adjacent[tempX][tempY] = 1;
+		adjacent2[tempY][tempX] = 1;
+		adjacent2[tempX][tempY] = 1;
+	}
 
-    return 0;
+	DFS(V);
+	cout << endl;
+	BFS(V);
+
+	return 0;
 }
