@@ -131,6 +131,7 @@
     <ClCompile Include="DFS.cpp" />
     <ClCompile Include="Dijkstra algorithm.cpp" />
     <ClCompile Include="Graph.cpp" />
+    <ClCompile Include="PriorityQueue.cpp" />
     <ClCompile Include="Tree.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
