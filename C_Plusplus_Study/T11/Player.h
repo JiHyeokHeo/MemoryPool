@@ -21,6 +21,8 @@ public:
 private:
 	void RightHand();
 	void Bfs();
+	void AStar();
+
 
 	void MyBfs();
 private:
