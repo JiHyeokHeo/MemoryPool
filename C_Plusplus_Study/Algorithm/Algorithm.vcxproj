@@ -129,11 +129,16 @@
   <ItemGroup>
     <ClCompile Include="BFS.cpp" />
     <ClCompile Include="BinarySearch.cpp" />
+    <ClCompile Include="BinarySearchTree.cpp" />
     <ClCompile Include="DFS.cpp" />
     <ClCompile Include="Dijkstra algorithm.cpp" />
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="PriorityQueue.cpp" />
     <ClCompile Include="Tree.cpp" />
+    <ClCompile Include="Treemain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BInarySearchTree.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
