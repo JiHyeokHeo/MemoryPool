@@ -8,15 +8,15 @@ void Player::Init(Board* board)
 	_pos = board->GetEnterPos();
 	_board = board;
 
-	AStar();
+	MyAStar();
 }
 
 void Player::Update(uint64 deltaTick)
 {
 	if (_pathIndex >= _path.size())
 	{
-		_board->GenerateMap();
-		Init(_board);
+		//_board->GenerateMap();
+		//Init(_board);
 		return;
 	}
 
@@ -30,7 +30,6 @@ void Player::Update(uint64 deltaTick)
 	}
 
 }
-
 
 bool Player::CanGo(Pos pos)
 {
@@ -257,6 +256,7 @@ void Player::MyBfs()
 
 }
 
+
 struct PQNode
 {
 	bool operator<(const PQNode& other) const { return f < other.f; }
@@ -400,3 +400,142 @@ void Player::AStar()
 	std::reverse(_path.begin(), _path.end());
 }
 
+struct Node
+{
+	bool operator>(const Node& other)const { return (g + h) > other.g + other.h; }
+	bool operator<(const Node& other)const { return (g + h) < other.g + other.h; }
+
+	int32 g;
+	int32 h;
+	Pos pos;
+};
+
+void Player::MyAStar()
+{
+	// f = g + h
+	Pos start = _pos;
+	// 목적지 도착하기 전에는 계속 실행
+	Pos dest = _board->GetExitPos();
+
+	Pos dir[] =
+	{
+		Pos {-1, 0 }, // up // left // down // right
+		Pos { 0,-1 },
+		Pos { 1,-0 },
+		Pos { 0, 1 },
+		Pos { 1 -1 },
+		Pos {-1,-1 },
+		Pos {-1, 1 },
+		Pos { 1, 1 },
+	};
+
+	const int32 cost[] =
+	{
+		10,
+		10,
+		10,
+		10,
+		14,
+		14,
+		14,
+		14,
+	};
+
+	// 사이즈 가져오고 한번 싹 밀기
+	const int32 size = _board->GetSize();
+
+	enum
+	{
+		DIR_COUNTS = 4,
+	};
+
+	// 닫혔는지 열렸는지 확인 // closedList
+	map<Pos, bool> closed;
+
+	// 체크
+	// f의 값 비교용
+	map<Pos, int32> best;
+
+	// 부모 확인
+	map<Pos, Pos> parent;
+
+	// 우선순위 큐로 확인 // openList
+	priority_queue<Node, vector<Node>, greater<Node>> pq;
+	
+	//     자기까지의 거리
+	// f = g + h;
+	// 초기화
+	{
+		int32 g = 0;
+		int32 h = 10 * (abs(dest.y - start.y) + abs(dest.x - start.x));
+		pq.push(Node{ g, h, start });
+		best[start] = g + h;
+		parent[start] = start;
+	}
+
+	
+	while (pq.empty() == false)
+	{
+		// 제일 값이 낮은 노드를 꺼내와서 f값!
+		Node temp = pq.top();
+		pq.pop();
+		
+		// 이미 최고로 좋은 값이 뽑은값보다 안좋다면 // 여기서는 f값으로 서로 비교
+		if (best[temp.pos] < temp.g + temp.h)
+			continue;
+
+		// 방문 성공
+		closed[temp.pos] = true;
+
+		// 목적지에 도착했다면 끝
+		if (dest == temp.pos)
+			break;
+
+		for (int32 i = 0; i < DIR_COUNTS; i++)
+		{
+			// 다음 갈곳 정하고
+			Pos nextPos = temp.pos + dir[i];
+
+			// 갈수없다면 넘기고
+			if (CanGo(nextPos) == false)
+				continue;
+
+			// 이미 방문한 지역이라면
+			if (closed[nextPos] == true)
+				continue;
+
+			// f = g + h // g는 
+			int32 g = temp.g + cost[i]; // 현재까지의 값
+			int32 h = 10 * (abs(dest.y - nextPos.y) + abs(dest.x - nextPos.x)); // 목적지까지의 값
+
+			// 이미 더 좋은 길을 알고있다면
+			if (best[nextPos] <= g + h && best[nextPos] != 0)
+				continue;
+
+			pq.push(Node{ g, h, nextPos });
+			best[nextPos] = g + h;
+			parent[nextPos] = temp.pos;
+
+		}
+
+	}
+
+	// 거꾸로 거슬러 올라간다.
+	Pos pos = dest;
+	_path.clear();
+	_pathIndex = 0;
+
+	// 부모 자신을 만날때까지 계속 순회
+	while (true)
+	{
+		_path.push_back(pos);
+
+		if (pos == parent[pos])
+			break;
+
+		pos = parent[pos];
+	}
+
+	std::reverse(_path.begin(), _path.end());
+
+}

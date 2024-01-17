@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BFS.cpp" />
+    <ClCompile Include="BinarySearch.cpp" />
     <ClCompile Include="DFS.cpp" />
     <ClCompile Include="Dijkstra algorithm.cpp" />
     <ClCompile Include="Graph.cpp" />
