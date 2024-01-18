@@ -7,39 +7,51 @@
 #include <algorithm>
 using namespace std;
 
+vector<vector<int>> adjacent;
+vector<bool> visited;
+int computerCnt;
+int connectCnt;
+
+int result = 0;
+void Find(int here)
+{
+	if (visited[here] == true)
+		return;
+
+	visited[here] = true;
+
+
+	for (int there = 1; there <= computerCnt; there++)
+	{
+		if (visited[there] == true)
+			continue;
+
+		if (adjacent[here][there] == -1)
+			continue;
+
+		result++;
+		Find(there);
+	}
+
+}
+
 int main(void)
 {
-	int N;
-	cin >> N;
+	cin >> computerCnt >> connectCnt;
+	adjacent.assign(computerCnt + 1, vector<int>(computerCnt + 1, -1));
+	visited.assign(computerCnt + 1, false);
 
-	vector<int> value(N + 1, -1);
-	vector<int> dp(N + 1, -1);
-	for (int i = 1; i <= N; i++)
+	for (int i = 0; i < connectCnt; i++)
 	{
-		int temp;
-		cin >> temp;
-		value[i] = temp;
+		int tempCom1;
+		int tempCom2;
+		cin >> tempCom1 >> tempCom2;
+		adjacent[tempCom1][tempCom2] = 1;
+		adjacent[tempCom2][tempCom1] = 1;
 	}
 
-	int result = 0;
-	
-	// 0은 시작
-	// 0->1
-	dp[1] = value[1];
-	// 0->2 or 0->1->2
-	dp[2] = max(value[2], value[1] + value[2]);
-	// 0->2->3 or 0->1->3
-	dp[3] = max(value[2] + value[3], value[1] + value[3]);
-
-	// 점화식으로 나타낸다면?
-	// dp[4] ? -> 0-1-2-4 or 0-1-3-4 
-	// dp[2] + value[4] or dp[1] + value[3] + value[4]; // 이 두녀석의 최대값을 비교
-	for (int i = 4; i <= N; i++)
-	{
-		dp[i] = max(dp[i - 2] + value[i], dp[i - 3] + value[i - 1] + value[i]);
-	}
-
-	cout << dp[N];
+	Find(1);
+	cout << result << endl;
 
 	return 0;
 }
