@@ -1,4 +1,4 @@
-#include <iostream>
+#include <stdio.h>
 #include <list>
 #include <vector>
 #include <queue>
@@ -7,51 +7,41 @@
 #include <algorithm>
 using namespace std;
 
-vector<vector<int>> adjacent;
-vector<bool> visited;
-int computerCnt;
-int connectCnt;
-
-int result = 0;
-void Find(int here)
-{
-	if (visited[here] == true)
-		return;
-
-	visited[here] = true;
-
-
-	for (int there = 1; there <= computerCnt; there++)
-	{
-		if (visited[there] == true)
-			continue;
-
-		if (adjacent[here][there] == -1)
-			continue;
-
-		result++;
-		Find(there);
-	}
-
-}
 
 int main(void)
 {
-	cin >> computerCnt >> connectCnt;
-	adjacent.assign(computerCnt + 1, vector<int>(computerCnt + 1, -1));
-	visited.assign(computerCnt + 1, false);
+	int row = 0;
+	int col = 0;
+	int sum = 0;
 
-	for (int i = 0; i < connectCnt; i++)
+	int arr[10][10] = {};
+
+	scanf_s("%d %d", &row, &col);
+
+	// 3 4
+	// 4 2 6 3
+	// 7 9 3 4
+	// 5 1 2 1
+
+	for (int i = 0; i < row; i++)
 	{
-		int tempCom1;
-		int tempCom2;
-		cin >> tempCom1 >> tempCom2;
-		adjacent[tempCom1][tempCom2] = 1;
-		adjacent[tempCom2][tempCom1] = 1;
+		int tempIdx = 1;
+		for (int j = 0; j < col; j++)
+		{
+			scanf_s("%d", &arr[i][j]);
+
+			if (j == tempIdx)
+			{
+				arr[i][0] += arr[i][tempIdx];
+				tempIdx++;
+			}
+		}
 	}
 
-	Find(1);
-	cout << result << endl;
+	for (int i = 0; i < row; i++)
+	{
+		printf("%d\n", arr[i][0]);
+	}
 
 	return 0;
 }
