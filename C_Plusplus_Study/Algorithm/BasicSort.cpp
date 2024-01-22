@@ -165,6 +165,62 @@ vector<int> Merge(vector<int> a, vector<int> b)
 	return temp;
 }
 
+std::vector<int> Merge(std::vector<int> a, std::vector<int> b);
+
+std::vector<int> MergeSort(std::vector<int> arr)
+{
+    if (arr.size() <= 1) {
+        return arr;
+    }
+
+    int middle = arr.size() / 2;
+    std::vector<int> left(arr.begin(), arr.begin() + middle);
+    std::vector<int> right(arr.begin() + middle, arr.end());
+
+    left = MergeSort(left);
+    right = MergeSort(right);
+
+    return Merge(left, right);
+}
+
+std::vector<int> Merge(std::vector<int> a, std::vector<int> b)
+{
+    std::vector<int> temp;
+
+    int leftVecIdx = 0;
+    int leftMaxVecIdx = a.size() - 1;
+    int rightVecIdx = 0;
+    int rightMaxVecIdx = b.size() - 1;
+
+    while (leftVecIdx <= leftMaxVecIdx && rightVecIdx <= rightMaxVecIdx)
+    {
+        if (a[leftVecIdx] <= b[rightVecIdx])
+        {
+            temp.push_back(a[leftVecIdx]);
+            leftVecIdx++;
+        }
+        else
+        {
+            temp.push_back(b[rightVecIdx]);
+            rightVecIdx++;
+        }
+    }
+
+    while (leftVecIdx <= leftMaxVecIdx)
+    {
+        temp.push_back(a[leftVecIdx]);
+        leftVecIdx++;
+    }
+
+    while (rightVecIdx <= rightMaxVecIdx)
+    {
+        temp.push_back(b[rightVecIdx]);
+        rightVecIdx++;
+    }
+
+    return temp;
+}
+
 void MergeResult(vector<int>& v, int left, int mid, int right)
 {	
 	// [L]              [R]
@@ -223,6 +279,42 @@ void MergeSort(vector<int>& v, int left, int right)
 	MergeResult(v, left, mid, right);
 }
 
+// [5][1][3][7][9][2][4][6][8]
+//  p 
+//    low                  high
+int Partition(vector<int>& v, int left, int right)
+{
+	int pivot = v[left];
+	int low = left + 1;
+	int high = right;
+
+	while (low <= high)
+	{
+		while (low <= right && pivot >= v[low])
+			low++;
+
+		while (high >= left + 1 && pivot <= v[high])
+			high--;
+
+		if (low < high)
+			swap(v[low], v[high]);
+	}
+
+	swap(v[left], v[high]);
+	return high;
+}
+
+void QuickSort(vector<int>& v, int left, int right)
+{
+	if (left > right)
+		return;
+
+	int pivot = Partition(v, left, right);
+	QuickSort(v, left, pivot - 1);
+	QuickSort(v, pivot + 1, right);
+
+}
+
 int main()
 {
 	vector<int> v{5, 4, 1, 3, 2};
@@ -235,6 +327,8 @@ int main()
 	//HeapSort(v);
 
 	//MergeSort(v, 0, v.size() - 1);
-	vector<int> result = Merge(v1, v2);
+	//vector<int> result = Merge(v1, v2);
+
+	QuickSort(v, 0, v.size() - 1);
 	return 0;
 }
