@@ -136,6 +136,7 @@
     <ClCompile Include="DisjointSet.cpp" />
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="HashTable.cpp" />
+    <ClCompile Include="Kruskal.cpp" />
     <ClCompile Include="PriorityQueue.cpp" />
     <ClCompile Include="Tree.cpp" />
     <ClCompile Include="Treemain.cpp" />

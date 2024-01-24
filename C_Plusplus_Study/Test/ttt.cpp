@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <iostream>
 #include <list>
 #include <vector>
 #include <queue>
@@ -7,40 +7,161 @@
 #include <algorithm>
 using namespace std;
 
-
-int main(void)
+void resize(int*& arr, int size);
+void resizeforD(int*& arr, int size);
+struct AC
 {
-	int row = 0;
-	int col = 0;
-	int sum = 0;
-
-	int arr[10][10] = {};
-
-	scanf_s("%d %d", &row, &col);
-
-	// 3 4
-	// 4 2 6 3
-	// 7 9 3 4
-	// 5 1 2 1
-
-	for (int i = 0; i < row; i++)
+	AC() {};
+	~AC() 
 	{
-		int tempIdx = 1;
-		for (int j = 0; j < col; j++)
-		{
-			scanf_s("%d", &arr[i][j]);
+		if(_data)
+		delete[] _data; 
+	};
 
-			if (j == tempIdx)
+	void R()
+	{
+		if (_size > 0)
+		{
+			for (int i = 0; i < _size / 2; i++)
 			{
-				arr[i][0] += arr[i][tempIdx];
-				tempIdx++;
+				int temp = _data[i];
+				_data[i] = _data[_size - 1 - i];
+				_data[_size - 1 - i] = temp;
 			}
+		}
+		else
+		{
+			cout << "[]" << endl;
+		}
+
+		
+	}
+
+	void D()
+	{
+		if (_size >= 0)
+		{
+			if(_size != 0)
+				resizeforD(_data, _size - 1);
+
+			_size--;
+		}
+
+		if (_size == 0)
+		{
+			cout << "[]" << endl;
 		}
 	}
 
-	for (int i = 0; i < row; i++)
+	int* _data = nullptr;
+	int _size = 0;
+};
+
+void resizeforD(int*& arr, int size)
+{
+	int* newArr = new int[size + 1];
+	for (int i = 0; i < size; i++)
+		newArr[i] = arr[i + 1];
+
+	if(arr)
+		delete[] arr;
+
+	arr = newArr;
+}
+
+void resize(int*& arr, int size)
+{
+	if (size <= 0)
+		return;
+
+	if (arr != nullptr)
 	{
-		printf("%d\n", arr[i][0]);
+		delete[] arr;
+		arr = nullptr;
+	}
+
+	int* newArr = new int[size + 1];
+	if (arr)
+		delete[] arr;
+
+	arr = newArr;
+
+	string order;
+	cin >> order;
+	int writeIdx = 0;
+	for (int i = 0; i < order.size(); i++)
+	{
+		int idx = i;
+		if (order[i] == '[')
+		{
+			string temp;
+			
+			while (true)
+			{
+				idx++;
+				if (order[idx] == ',' || order[idx] == ']')
+					break;
+
+				temp += order[idx];
+			}
+			arr[writeIdx] = stoi(temp);
+			writeIdx++;
+		}
+		else if (order[i] == ',')
+		{
+			string temp;
+			while (true)
+			{
+				idx++;
+				if (order[idx] == ',' || order[idx] == ']')
+					break;
+
+				temp += order[idx];
+			}
+			arr[writeIdx] = stoi(temp);
+			writeIdx++;
+		}
+	}
+
+}
+
+int main(void)
+{
+	int T;
+	cin >> T;
+
+	string name;
+	int size;
+	while (T > 0)
+	{
+		cin >> name;
+		cin >> size;
+		AC word;
+		resize(word._data, size);
+		word._size = size;
+		
+		for (int i = 0; i < name.size(); i++)
+		{
+			if (name[i] == 'D')
+				word.D();
+			if (name[i] == 'R')
+				word.R();
+		}
+
+		if (word._size > 0)
+		{
+			cout << '[';
+			for (int i = 0; i < word._size; i++)
+			{
+				cout << word._data[i];
+
+				if(i != word._size - 1)
+					cout << ',';
+			}
+			cout << ']' << endl;
+		}
+
+		T--;
 	}
 
 	return 0;
