@@ -12,6 +12,9 @@
     <Filter Include="소스 파일\BST">
       <UniqueIdentifier>{6fcd7508-7092-4bb0-be02-60a50ff86c36}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\DP">
+      <UniqueIdentifier>{5786a908-9deb-45a0-9809-efb4a81047c1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Graph.cpp">
@@ -54,7 +57,10 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="DP.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="DPBasic.cpp">
+      <Filter>소스 파일\DP</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

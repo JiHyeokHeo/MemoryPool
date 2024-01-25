@@ -135,6 +135,7 @@
     <ClCompile Include="Dijkstra algorithm.cpp" />
     <ClCompile Include="DisjointSet.cpp" />
     <ClCompile Include="DP.cpp" />
+    <ClCompile Include="DPBasic.cpp" />
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="HashTable.cpp" />
     <ClCompile Include="Kruskal.cpp" />
