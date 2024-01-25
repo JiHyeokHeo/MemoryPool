@@ -183,43 +183,43 @@
 //    return Merge(left, right);
 //}
 //
-//std::vector<int> Merge(std::vector<int> a, std::vector<int> b)
-//{
-//    std::vector<int> temp;
-//
-//    int leftVecIdx = 0;
-//    int leftMaxVecIdx = a.size() - 1;
-//    int rightVecIdx = 0;
-//    int rightMaxVecIdx = b.size() - 1;
-//
-//    while (leftVecIdx <= leftMaxVecIdx && rightVecIdx <= rightMaxVecIdx)
-//    {
-//        if (a[leftVecIdx] <= b[rightVecIdx])
-//        {
-//            temp.push_back(a[leftVecIdx]);
-//            leftVecIdx++;
-//        }
-//        else
-//        {
-//            temp.push_back(b[rightVecIdx]);
-//            rightVecIdx++;
-//        }
-//    }
-//
-//    while (leftVecIdx <= leftMaxVecIdx)
-//    {
-//        temp.push_back(a[leftVecIdx]);
-//        leftVecIdx++;
-//    }
-//
-//    while (rightVecIdx <= rightMaxVecIdx)
-//    {
-//        temp.push_back(b[rightVecIdx]);
-//        rightVecIdx++;
-//    }
-//
-//    return temp;
-//}
+////std::vector<int> Merge(std::vector<int> a, std::vector<int> b)
+////{
+////    std::vector<int> temp;
+////
+////    int leftVecIdx = 0;
+////    int leftMaxVecIdx = a.size() - 1;
+////    int rightVecIdx = 0;
+////    int rightMaxVecIdx = b.size() - 1;
+////
+////    while (leftVecIdx <= leftMaxVecIdx && rightVecIdx <= rightMaxVecIdx)
+////    {
+////        if (a[leftVecIdx] <= b[rightVecIdx])
+////        {
+////            temp.push_back(a[leftVecIdx]);
+////            leftVecIdx++;
+////        }
+////        else
+////        {
+////            temp.push_back(b[rightVecIdx]);
+////            rightVecIdx++;
+////        }
+////    }
+////
+////    while (leftVecIdx <= leftMaxVecIdx)
+////    {
+////        temp.push_back(a[leftVecIdx]);
+////        leftVecIdx++;
+////    }
+////
+////    while (rightVecIdx <= rightMaxVecIdx)
+////    {
+////        temp.push_back(b[rightVecIdx]);
+////        rightVecIdx++;
+////    }
+////
+////    return temp;
+////}
 //
 //void MergeResult(vector<int>& v, int left, int mid, int right)
 //{	
@@ -282,7 +282,7 @@
 //// [5][1][3][7][9][2][4][6][8]
 ////  p 
 ////    low                  high
-//
+////vector<int> v{ 5, 4, 1, 3, 2 };
 //int Partition(vector<int>& v, int left, int right)
 //{
 //	int pivot = v[left];
