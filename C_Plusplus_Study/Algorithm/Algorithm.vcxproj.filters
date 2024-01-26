@@ -62,6 +62,9 @@
     <ClCompile Include="DPBasic.cpp">
       <Filter>소스 파일\DP</Filter>
     </ClCompile>
+    <ClCompile Include="TrianglePath_DP.cpp">
+      <Filter>소스 파일\DP</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BInarySearchTree.h">
