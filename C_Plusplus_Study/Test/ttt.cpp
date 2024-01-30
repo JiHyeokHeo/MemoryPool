@@ -8,36 +8,34 @@
 #include <basetsd.h>
 using namespace std;
 
-int arr[3] = { 1,2,3 };
-
-int n = 3, k = 2;
-
-void print(vector<int> b)
+vector<string> split(string input, string delimiter)
 {
-	for (int i : b)
-		cout << i << " ";
-	cout << "\n";
-}
+	vector<string> ret;
+	long long pos;
+	string temp = " ";
 
-void combi(int start, vector<int> b)
-{
-	if (b.size() == k)
+	while ((pos = input.find(delimiter)) != string::npos)
 	{
-		print(b);
-		return;
+		temp = input.substr(0, pos);
+		ret.push_back(temp);
+		input.erase(0, pos + delimiter.length());
 	}
 
-	for (int i = start + 1; i < n; i++)
-	{
-		b.push_back(arr[i]);
-		combi(i, b);
-		b.pop_back();
-	}
+	ret.push_back(input);
+	return ret;
 }
 
 int main() 
 {
-	vector<int> b;
+	string test = "³ª´Â ¹ä¿À", d = " ";
 
-	combi(-1, b);
+	vector<string> answer = split(test, d);
+
+	for (string i : answer)
+	{
+		cout << i << "\n";
+	}
+
+	
+
 }
