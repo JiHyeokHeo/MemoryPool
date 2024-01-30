@@ -9,27 +9,24 @@
 #include <map>
 using namespace std;
 
-map<int, int> mp;
-int main()
+vector<int> v;
+int main() 
 {
-    vector<int> v{ 1,1,2,2,3,3 };
-    for (int i : v)
-    {
-        if (mp[i])
-            continue;
-        else
-            mp[i] = 1;
-    }
+	for (int i = 1; i <= 5; i++) 
+	{
+		v.push_back(i);
+		v.push_back(i);
+	}
+	for (int i : v) cout << i << " ";
+	cout << '\n';
+	// 중복되지 않은 요소로 채운 후, 그 다음 이터레이터를 반환한다.
+	auto it = unique(v.begin(), v.end());
 
-    vector<int> ret;
-    map<int, int>::iterator it
-        = mp.begin();
-    for (; it != mp.end(); it++)
-        ret.push_back(it->first);
+	auto a = it - v.begin();
 
-    for (int i : ret)
-        cout << i << '\n';
-
-    return 0;
+	cout << it - v.begin() << '\n';
+	// 앞에서 부터 중복되지 않게 채운 후 나머지 요소들은 그대로 둔다.
+	for (int i : v) cout << i << " ";
+	cout << '\n';
+	return 0;
 }
-
