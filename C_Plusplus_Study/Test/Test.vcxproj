@@ -22,6 +22,7 @@
     <ClCompile Include="List.cpp" />
     <ClCompile Include="Queue.cpp" />
     <ClCompile Include="Stack.cpp" />
+    <ClCompile Include="t2.cpp" />
     <ClCompile Include="Vector.cpp" />
     <ClCompile Include="ttt.cpp" />
   </ItemGroup>

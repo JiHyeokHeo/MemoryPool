@@ -5,164 +5,52 @@
 #include <math.h>
 #include <string>
 #include <algorithm>
+#include <basetsd.h>
 using namespace std;
 
-void resize(int*& arr, int size);
-void resizeforD(int*& arr, int size);
-struct AC
+int n = 5, k = 3, a[5] = { 1,2,3,4,5 };
+
+void print(vector<int> b)
 {
-	AC() {};
-	~AC() 
-	{
-		if(_data)
-		delete[] _data; 
-	};
-
-	void R()
-	{
-		if (_size > 0)
-		{
-			for (int i = 0; i < _size / 2; i++)
-			{
-				int temp = _data[i];
-				_data[i] = _data[_size - 1 - i];
-				_data[_size - 1 - i] = temp;
-			}
-		}
-		else
-		{
-			cout << "[]" << endl;
-		}
-
-		
-	}
-
-	void D()
-	{
-		if (_size >= 0)
-		{
-			if(_size != 0)
-				resizeforD(_data, _size - 1);
-
-			_size--;
-		}
-
-		if (_size == 0)
-		{
-			cout << "[]" << endl;
-		}
-	}
-
-	int* _data = nullptr;
-	int _size = 0;
-};
-
-void resizeforD(int*& arr, int size)
-{
-	int* newArr = new int[size + 1];
-	for (int i = 0; i < size; i++)
-		newArr[i] = arr[i + 1];
-
-	if(arr)
-		delete[] arr;
-
-	arr = newArr;
+    for (int i : b)
+    {
+        cout << i << " ";
+    }
+    cout << '\n';
 }
 
-void resize(int*& arr, int size)
+void combi(int start, vector<int> b)
 {
-	if (size <= 0)
-		return;
+    if (b.size() == k)
+    {
+        print(b);
+        return;
+    }
 
-	if (arr != nullptr)
-	{
-		delete[] arr;
-		arr = nullptr;
-	}
-
-	int* newArr = new int[size + 1];
-	if (arr)
-		delete[] arr;
-
-	arr = newArr;
-
-	string order;
-	cin >> order;
-	int writeIdx = 0;
-	for (int i = 0; i < order.size(); i++)
-	{
-		int idx = i;
-		if (order[i] == '[')
-		{
-			string temp;
-			
-			while (true)
-			{
-				idx++;
-				if (order[idx] == ',' || order[idx] == ']')
-					break;
-
-				temp += order[idx];
-			}
-			arr[writeIdx] = stoi(temp);
-			writeIdx++;
-		}
-		else if (order[i] == ',')
-		{
-			string temp;
-			while (true)
-			{
-				idx++;
-				if (order[idx] == ',' || order[idx] == ']')
-					break;
-
-				temp += order[idx];
-			}
-			arr[writeIdx] = stoi(temp);
-			writeIdx++;
-		}
-	}
+    for (int i = start + 1; i < n; i++)
+    {
+        b.push_back(a[i]);
+        combi(i, b);
+        b.pop_back();
+    }
 
 }
 
-int main(void)
-{
-	int T;
-	cin >> T;
+int main() {
 
-	string name;
-	int size;
-	while (T > 0)
-	{
-		cin >> name;
-		cin >> size;
-		AC word;
-		resize(word._data, size);
-		word._size = size;
-		
-		for (int i = 0; i < name.size(); i++)
-		{
-			if (name[i] == 'D')
-				word.D();
-			if (name[i] == 'R')
-				word.R();
-		}
+    vector<int> b;
+    //combi(-1, b);
 
-		if (word._size > 0)
-		{
-			cout << '[';
-			for (int i = 0; i < word._size; i++)
-			{
-				cout << word._data[i];
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            for (int k = 0; k < j; k++)
+            {
+                cout << i << " : " << j << " : " << k << "\n";
+            }
+        }
+    }
 
-				if(i != word._size - 1)
-					cout << ',';
-			}
-			cout << ']' << endl;
-		}
-
-		T--;
-	}
-
-	return 0;
+    return 0;
 }

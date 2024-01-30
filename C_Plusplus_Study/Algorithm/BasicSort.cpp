@@ -68,7 +68,7 @@
 //// [3]
 //// [5][9][J][3] [K]
 //// 
-//
+////vector<int> v{ 5, 4, 1, 3, 2 };
 //void InsertionSort(vector<int>& v)
 //{
 //	const int n = v.size();
@@ -119,107 +119,107 @@
 //// [3][K] [7][2] [J][4] [8][9]		2°³ * 4
 //// [3] [K] [7] [2] [J] [4] [8] [9]	1°³ * 8
 //// [2][3][7][K] [4][8][9][J]
-//vector<int> v1{ 1, 2, 7, 8, 20 };
-//vector<int> v2{ 3, 4, 6, 9, 10 };
-//vector<int> Merge(vector<int> a, vector<int> b)
+////vector<int> v1{ 1, 2, 7, 8, 20 };
+////vector<int> v2{ 3, 4, 6, 9, 10 };
+////vector<int> Merge(vector<int> a, vector<int> b)
+////{
+////	vector<int> temp;
+////
+////	int leftVecIdx = 0;
+////	int leftMaxVecIdx = a.size() - 1;
+////	int rightVecIdx = 0;
+////	int rightMaxVecIdx = b.size() - 1;
+////
+////	while (leftVecIdx <= rightMaxVecIdx && rightVecIdx <= leftMaxVecIdx)
+////	{
+////		if (v1[leftVecIdx] <= v2[rightVecIdx])
+////		{
+////			temp.push_back(v1[leftVecIdx]);
+////			leftVecIdx++;
+////		}
+////		else
+////		{
+////			temp.push_back(v2[rightVecIdx]);
+////			rightVecIdx++;
+////		}
+////	}
+////
+////	if (leftVecIdx > rightMaxVecIdx)
+////	{
+////		while (rightVecIdx <= leftMaxVecIdx)
+////		{
+////			temp.push_back(v2[rightVecIdx]);
+////			rightVecIdx++;
+////		}
+////	}
+////	else
+////	{
+////		while (leftVecIdx <= rightMaxVecIdx)
+////		{
+////			temp.push_back(v1[leftVecIdx]);
+////			leftVecIdx++;
+////		}
+////	}
+////
+////
+////	return temp;
+////}
+////
+////std::vector<int> Merge(std::vector<int> a, std::vector<int> b);
+////
+////std::vector<int> MergeSort(std::vector<int> arr)
+////{
+////    if (arr.size() <= 1) {
+////        return arr;
+////    }
+////
+////    int middle = arr.size() / 2;
+////    std::vector<int> left(arr.begin(), arr.begin() + middle);
+////    std::vector<int> right(arr.begin() + middle, arr.end());
+////
+////    left = MergeSort(left);
+////    right = MergeSort(right);
+////
+////    return Merge(left, right);
+////}
+//
+//std::vector<int> Merge(std::vector<int> a, std::vector<int> b)
 //{
-//	vector<int> temp;
+//    std::vector<int> temp;
 //
-//	int leftVecIdx = 0;
-//	int leftMaxVecIdx = a.size() - 1;
-//	int rightVecIdx = 0;
-//	int rightMaxVecIdx = b.size() - 1;
+//    int leftVecIdx = 0;
+//    int leftMaxVecIdx = a.size() - 1;
+//    int rightVecIdx = 0;
+//    int rightMaxVecIdx = b.size() - 1;
 //
-//	while (leftVecIdx <= rightMaxVecIdx && rightVecIdx <= leftMaxVecIdx)
-//	{
-//		if (v1[leftVecIdx] <= v2[rightVecIdx])
-//		{
-//			temp.push_back(v1[leftVecIdx]);
-//			leftVecIdx++;
-//		}
-//		else
-//		{
-//			temp.push_back(v2[rightVecIdx]);
-//			rightVecIdx++;
-//		}
-//	}
-//
-//	if (leftVecIdx > rightMaxVecIdx)
-//	{
-//		while (rightVecIdx <= leftMaxVecIdx)
-//		{
-//			temp.push_back(v2[rightVecIdx]);
-//			rightVecIdx++;
-//		}
-//	}
-//	else
-//	{
-//		while (leftVecIdx <= rightMaxVecIdx)
-//		{
-//			temp.push_back(v1[leftVecIdx]);
-//			leftVecIdx++;
-//		}
-//	}
-//
-//
-//	return temp;
-//}
-//
-//std::vector<int> Merge(std::vector<int> a, std::vector<int> b);
-//
-//std::vector<int> MergeSort(std::vector<int> arr)
-//{
-//    if (arr.size() <= 1) {
-//        return arr;
+//    while (leftVecIdx <= leftMaxVecIdx && rightVecIdx <= rightMaxVecIdx)
+//    {
+//        if (a[leftVecIdx] <= b[rightVecIdx])
+//        {
+//            temp.push_back(a[leftVecIdx]);
+//            leftVecIdx++;
+//        }
+//        else
+//        {
+//            temp.push_back(b[rightVecIdx]);
+//            rightVecIdx++;
+//        }
 //    }
 //
-//    int middle = arr.size() / 2;
-//    std::vector<int> left(arr.begin(), arr.begin() + middle);
-//    std::vector<int> right(arr.begin() + middle, arr.end());
+//    while (leftVecIdx <= leftMaxVecIdx)
+//    {
+//        temp.push_back(a[leftVecIdx]);
+//        leftVecIdx++;
+//    }
 //
-//    left = MergeSort(left);
-//    right = MergeSort(right);
+//    while (rightVecIdx <= rightMaxVecIdx)
+//    {
+//        temp.push_back(b[rightVecIdx]);
+//        rightVecIdx++;
+//    }
 //
-//    return Merge(left, right);
+//    return temp;
 //}
-//
-////std::vector<int> Merge(std::vector<int> a, std::vector<int> b)
-////{
-////    std::vector<int> temp;
-////
-////    int leftVecIdx = 0;
-////    int leftMaxVecIdx = a.size() - 1;
-////    int rightVecIdx = 0;
-////    int rightMaxVecIdx = b.size() - 1;
-////
-////    while (leftVecIdx <= leftMaxVecIdx && rightVecIdx <= rightMaxVecIdx)
-////    {
-////        if (a[leftVecIdx] <= b[rightVecIdx])
-////        {
-////            temp.push_back(a[leftVecIdx]);
-////            leftVecIdx++;
-////        }
-////        else
-////        {
-////            temp.push_back(b[rightVecIdx]);
-////            rightVecIdx++;
-////        }
-////    }
-////
-////    while (leftVecIdx <= leftMaxVecIdx)
-////    {
-////        temp.push_back(a[leftVecIdx]);
-////        leftVecIdx++;
-////    }
-////
-////    while (rightVecIdx <= rightMaxVecIdx)
-////    {
-////        temp.push_back(b[rightVecIdx]);
-////        rightVecIdx++;
-////    }
-////
-////    return temp;
-////}
 //
 //void MergeResult(vector<int>& v, int left, int mid, int right)
 //{	
@@ -326,7 +326,7 @@
 //
 //	//BubbleSort(v);
 //	//SelectionSort(v);
-//	//InsertionSort(v);
+//	InsertionSort(v);
 //	//HeapSort(v);
 //
 //	//MergeSort(v, 0, v.size() - 1);
