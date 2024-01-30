@@ -8,25 +8,33 @@
 #include <basetsd.h>
 using namespace std;
 
-vector<string> split(string input, string delimiter)
+int arr[3] = { 1,2,3 };
+int n = 3, r = 3;
+
+void print()
 {
-	vector<string> ret;
-	long long pos = 0;
-	string token = " ";
-
-	while ((pos = input.find(delimiter)) != string::npos)
-	{
-		token = input.substr(0, pos);
-		ret.push_back(token);
-		input.erase(0, pos + delimiter.length());
-	}
-	ret.push_back(input);
-
-	return ret;
+	for (int i : arr)
+		cout << i << " ";
+	cout << "\n";
 }
+
+void permutation(int n, int r, int depth)
+{
+	if (r == depth)
+	{
+		print();
+		return;
+	}
+
+	for (int i = depth; i < n; i++)
+	{
+		swap(arr[i], arr[depth]);
+		permutation(n, r, depth + 1);
+		swap(arr[i], arr[depth]);
+	}
+}
+
 int main() 
 {
-	string s = "abdc", d = "d";
-	vector<string> a = split(s, d);
-	for (string b : a) cout << b << "\n";
+	permutation(n, r, 0);
 }
