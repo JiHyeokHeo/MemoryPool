@@ -6,36 +6,30 @@
 #include <string>
 #include <algorithm>
 #include <basetsd.h>
+#include <map>
 using namespace std;
 
-vector<string> split(string input, string delimiter)
+map<int, int> mp;
+int main()
 {
-	vector<string> ret;
-	long long pos;
-	string temp = " ";
+    vector<int> v{ 1,1,2,2,3,3 };
+    for (int i : v)
+    {
+        if (mp[i])
+            continue;
+        else
+            mp[i] = 1;
+    }
 
-	while ((pos = input.find(delimiter)) != string::npos)
-	{
-		temp = input.substr(0, pos);
-		ret.push_back(temp);
-		input.erase(0, pos + delimiter.length());
-	}
+    vector<int> ret;
+    map<int, int>::iterator it
+        = mp.begin();
+    for (; it != mp.end(); it++)
+        ret.push_back(it->first);
 
-	ret.push_back(input);
-	return ret;
+    for (int i : ret)
+        cout << i << '\n';
+
+    return 0;
 }
 
-int main() 
-{
-	string test = "³ª´Â ¹ä¿À", d = " ";
-
-	vector<string> answer = split(test, d);
-
-	for (string i : answer)
-	{
-		cout << i << "\n";
-	}
-
-	
-
-}

@@ -36,9 +36,6 @@
     <Filter Include="소스 파일\OperatorOverloading">
       <UniqueIdentifier>{15fe2fd0-c5a3-4a04-a5b5-fbdab932af1e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\DynamicMemoryAllocation">
-      <UniqueIdentifier>{7deb3550-16a7-43f8-9688-70a04c84114e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\TypeCasting">
       <UniqueIdentifier>{37d7744b-7f5e-4156-9299-822736b68d10}</UniqueIdentifier>
     </Filter>
@@ -63,25 +60,28 @@
     <Filter Include="소스 파일\ForwardDeclaration">
       <UniqueIdentifier>{351c723e-fe84-43e2-8fa3-5f6cb7be7d08}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\Practice\String\STL">
+    <Filter Include="소스 파일\Array\DynamicMemoryAllocation">
+      <UniqueIdentifier>{7deb3550-16a7-43f8-9688-70a04c84114e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\STL">
       <UniqueIdentifier>{e290465e-508d-4994-8f15-f37e7dedc2c7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\Practice\String\STL\SequenceContainter">
+    <Filter Include="소스 파일\STL\SequenceContainter">
       <UniqueIdentifier>{38ceac2b-45e9-4776-8aa4-374515692923}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\Practice\String\STL\SequenceContainter\List">
+    <Filter Include="소스 파일\STL\SequenceContainter\List">
       <UniqueIdentifier>{34dfe3a4-3692-4273-8267-0003b09aeda8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\Practice\String\STL\SequenceContainter\Deque">
+    <Filter Include="소스 파일\STL\SequenceContainter\Deque">
       <UniqueIdentifier>{eb85f7b4-5ebd-4af7-89e3-f649dbe9b097}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\Practice\String\STL\SequenceContainter\Vector">
+    <Filter Include="소스 파일\STL\SequenceContainter\Vector">
       <UniqueIdentifier>{8af68068-05d4-47f1-ba04-c5719f9f9a63}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\Practice\String\STL\Aassociate Container">
+    <Filter Include="소스 파일\STL\Aassociate Container">
       <UniqueIdentifier>{12b2ec44-65a4-4213-8d1d-133cbce9f05a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\Practice\String\STL\Algorithm">
+    <Filter Include="소스 파일\STL\Algorithm">
       <UniqueIdentifier>{b33110b2-e684-47bd-b694-d8a71b7830e9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -147,7 +147,7 @@
       <Filter>소스 파일\OOP</Filter>
     </ClCompile>
     <ClCompile Include="DMA_1.cpp">
-      <Filter>소스 파일\DynamicMemoryAllocation</Filter>
+      <Filter>소스 파일\Array\DynamicMemoryAllocation</Filter>
     </ClCompile>
     <ClCompile Include="TypeCasting.cpp">
       <Filter>소스 파일\TypeCasting</Filter>
@@ -156,7 +156,7 @@
       <Filter>소스 파일\TypeCasting</Filter>
     </ClCompile>
     <ClCompile Include="Copy.cpp">
-      <Filter>소스 파일\DynamicMemoryAllocation</Filter>
+      <Filter>소스 파일\Array\DynamicMemoryAllocation</Filter>
     </ClCompile>
     <ClCompile Include="Casting.cpp">
       <Filter>소스 파일\TypeCasting</Filter>
@@ -183,25 +183,25 @@
       <Filter>소스 파일\Function\Functor</Filter>
     </ClCompile>
     <ClCompile Include="Vector.cpp">
-      <Filter>소스 파일\Practice\String\STL\SequenceContainter\Vector</Filter>
+      <Filter>소스 파일\STL\SequenceContainter\Vector</Filter>
     </ClCompile>
     <ClCompile Include="MyVector.cpp">
-      <Filter>소스 파일\Practice\String\STL\SequenceContainter\Vector</Filter>
+      <Filter>소스 파일\STL\SequenceContainter\Vector</Filter>
     </ClCompile>
     <ClCompile Include="List.cpp">
-      <Filter>소스 파일\Practice\String\STL\SequenceContainter\List</Filter>
+      <Filter>소스 파일\STL\SequenceContainter\List</Filter>
     </ClCompile>
     <ClCompile Include="MyList.cpp">
-      <Filter>소스 파일\Practice\String\STL\SequenceContainter\List</Filter>
+      <Filter>소스 파일\STL\SequenceContainter\List</Filter>
     </ClCompile>
     <ClCompile Include="Deque.cpp">
-      <Filter>소스 파일\Practice\String\STL\SequenceContainter\Deque</Filter>
+      <Filter>소스 파일\STL\SequenceContainter\Deque</Filter>
     </ClCompile>
     <ClCompile Include="Map.cpp">
-      <Filter>소스 파일\Practice\String\STL\Aassociate Container</Filter>
+      <Filter>소스 파일\STL\Aassociate Container</Filter>
     </ClCompile>
     <ClCompile Include="Set_Multimap_Multiset.cpp">
-      <Filter>소스 파일\Practice\String\STL\Aassociate Container</Filter>
+      <Filter>소스 파일\STL\Aassociate Container</Filter>
     </ClCompile>
     <ClCompile Include="Auto.cpp">
       <Filter>소스 파일\ModernCpp</Filter>
@@ -234,7 +234,7 @@
       <Filter>소스 파일\ModernCpp</Filter>
     </ClCompile>
     <ClCompile Include="STLPractice.cpp">
-      <Filter>소스 파일\Practice\String\STL\Algorithm</Filter>
+      <Filter>소스 파일\STL\Algorithm</Filter>
     </ClCompile>
     <ClCompile Include="SmartPointer.cpp">
       <Filter>소스 파일\ModernCpp</Filter>
